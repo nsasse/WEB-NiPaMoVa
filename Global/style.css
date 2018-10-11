@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body{
+    color: #000000;
+    font-family: 'Roboto Condensed', sans-serif;
+    size: 36pt;
+}
+
+h1{
+    color: #002f6c;
+    size: 70pt;
+}
+
+h2{
+    color: #002f6c;
+    size: 45pt;
+}
+
+h3{
+    color: #002f6c;
+    size: 40pt;
+   
+}
+
+.textfield{
+    color: #4F83CC;
+    size: 34pt;
+}
+
+.box{
+    background-color: #F5F5F5;
+    border-style: none;
+}
+
+.button{
+    color: #FFFFFF;
+    size: 30pt;
+    background: #002f6c;
+
+}
