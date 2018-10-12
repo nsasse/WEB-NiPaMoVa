@@ -1,0 +1,8 @@
+html{
+    background-image: url(../Grafiken/StartseiteBackground.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*Anpassen für alle Bildschirme*/
+}
