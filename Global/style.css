@@ -4,28 +4,34 @@
 body{
     color: #000000;
     font-family: 'Roboto Condensed', sans-serif;
-    size: 36pt;
+    font-size: 1em;
 }
 
 h1{
     color: #002f6c;
-    size: 70pt;
+    font-size: 3.5em;
+    font-weight: bold;
 }
 
 h2{
     color: #002f6c;
-    size: 45pt;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2_header{
+    color: #FFFFFF;
+    font-size: 1.5em;
 }
 
 h3{
     color: #002f6c;
-    size: 40pt;
-   
+    font-size: 1em;
 }
 
 .textfield{
     color: #4F83CC;
-    size: 34pt;
+    font-size: 1em;
 }
 
 .box{
@@ -35,7 +41,48 @@ h3{
 
 .button{
     color: #FFFFFF;
-    size: 30pt;
+    font-size: 1em;
     background: #002f6c;
-
 }
+
+/*Angaben für das Grid-Layout*/
+.container { 
+    display: grid; 
+    grid-template-rows:10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns:8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
+  }
+
+header{
+    background-color: #002f6c;
+    color: #FFFFFF;
+    padding: 0.5%;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+main{
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 10;
+    }
+footer{
+    background-color: #002f6c;
+    color: #FFFFFF;
+}
+
+  /* Spaltenangaben in %
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+*/
