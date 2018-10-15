@@ -10,3 +10,8 @@ Farbcodes:
     dunkel: #002f6c
 
 
+
+Copyright Icons:
+Icons:   https://thenounproject.com/Nosweat/collection/webshop-selected/  -  By Miroku Sama, NL 
+
+
