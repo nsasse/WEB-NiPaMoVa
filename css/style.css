@@ -9,15 +9,15 @@ html, body{
     padding: 0%;
 }
 
-h1{
+#bootstrap-overrides h1{
     color: #002f6c;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: bold;
 }
 
-h2{
+#bootstrap-overrides h2{
     color: #002f6c;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -26,7 +26,7 @@ h2_header{
     font-size: 1.5em;
 }
 
-h3{
+#bootstrap-overrides h3{
     color: #002f6c;
     font-size: 1em;
 }
@@ -41,51 +41,59 @@ h3{
     border-style: none;
 }
 
-.btn{
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #FFFFFF;
-    font-size: 1.4em;
-    background: #002f6c;
-    width: 100%;
-    height: 100%;
-    padding: 0.5%
-}
-
-/*Angaben für das Grid-Layout*/
-
-/*
-.grid-box {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 16.66% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
-    grid-template-rows: 15% 10% 10% 10% 10% 10% 10% 10% 5% 10%;
-
-}
-
 .header{
     background-color: #002f6c;
-    color: #FFFFFF;
-    grid-column-start: 1;
-    grid-column-end: 12;
-    grid-row-start: 1;
-    grid-row-end: 2;
     padding: 0.5%;
+    height: 15vh;
+
 }
 
-.content{
-    grid-column-start: 2;
-    grid-column-end: 11;
-    grid-row-start: 2;
-    grid-row-end: 9;
-}
-
-.footer{
-    background-color: #002f6c;
-    color: #FFFFFF;
-    grid-column-start: 1;
-    grid-column-end: 12;
-    grid-row-start: 10;
-    grid-row-end: 11;
-}
-*/
+.btn-mipamova { 
+    color: #FFFFFF; 
+    background-color: #002F6C; 
+    border-color: #002F6C; 
+    width: 100%;
+    height: 100%;
+    padding: 0.5%;
+    font-family: 'Roboto Condensed', sans-serif;
+  } 
+   
+  .btn-mipamova:hover, 
+  .btn-mipamova:focus, 
+  .btn-mipamova:active, 
+  .btn-mipamova.active, 
+  .open .dropdown-toggle.btn-mipamova { 
+    color: #FFFFFF; 
+    background-color: #4F83CC; 
+    border-color: #002F6C; 
+  } 
+   
+  .btn-mipamova:active, 
+  .btn-mipamova.active, 
+  .open .dropdown-toggle.btn-mipamova { 
+    background-image: none; 
+  } 
+   
+  .btn-mipamova.disabled, 
+  .btn-mipamova[disabled], 
+  fieldset[disabled] .btn-mipamova, 
+  .btn-mipamova.disabled:hover, 
+  .btn-mipamova[disabled]:hover, 
+  fieldset[disabled] .btn-mipamova:hover, 
+  .btn-mipamova.disabled:focus, 
+  .btn-mipamova[disabled]:focus, 
+  fieldset[disabled] .btn-mipamova:focus, 
+  .btn-mipamova.disabled:active, 
+  .btn-mipamova[disabled]:active, 
+  fieldset[disabled] .btn-mipamova:active, 
+  .btn-mipamova.disabled.active, 
+  .btn-mipamova[disabled].active, 
+  fieldset[disabled] .btn-mipamova.active { 
+    background-color: #002F6C; 
+    border-color: #002F6C; 
+  } 
+   
+  .btn-mipamova .badge { 
+    color: #002F6C; 
+    background-color: #FFFFFF; 
+  }

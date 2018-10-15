@@ -1,36 +1,7 @@
-html{
-    background-image: url(../Grafiken/StartseiteBackground.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.bg{
+    background-image: url(../img/StartseiteBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    /*Anpassen für alle Bildschirme*/
-}
-
-.button-wsb{
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.button-moeglichkeiten{
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.button-preis{
-    grid-column-start: 8;
-    grid-column-end: 10;
-    grid-row-start: 6;
-    grid-row-end: 7;
-}
-
-.button-starten{
-    grid-column-start: 4;
-    grid-column-end: 8;
-    grid-row-start: 8;
-    grid-row-end: 9;
+    height: 100vh;
 }
