@@ -21,14 +21,14 @@ html, body{
     font-weight: bold;
 }
 
-h2_header{
+.h2_header{
     color: #FFFFFF;
     font-size: 1.5em;
 }
 
 #bootstrap-overrides h3{
     color: #002f6c;
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
 .textfield{
