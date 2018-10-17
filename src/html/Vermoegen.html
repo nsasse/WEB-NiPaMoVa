@@ -18,31 +18,38 @@
       </div>
     </div>
     <div class="row">
-      <div class="col" style="max-width: 17%;"></div>
+      <div class="col" id="sidebar"></div>
       <div class="col">
         <br>
         <h2>Geben Sie Ihr Vermögen ein:</h2><br>
         <br>
       </div>
-      <div class="col" style="max-width: 17%;"></div>
+      <div class="col" id="sidebar"></div>
     </div>
     <div class="row">
-      <div class="col" style="max-width: 17%;"></div>
+      <div class="col" id="sidebar"></div>
       <div class="col form-group inputbox">
-        <input class="beschreibung" placeholder="Beschreibung" value="">
-        <input class="betrag" placeholder="Betrag" value="">
+        <input type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+        <input type="number" class="form-control  textfield" placeholder="Betrag" value="" min="0" step="1"
+          data-number-stepfactor="100">
       </div>
-      <div class="col" style="max-width: 17%;"></div>
+      <div class="col inputbox" id="deletebutton">
+        <img src="../ressources/img/Icons/minusIcon.png" width="100%">
+      </div>
+      <div class="col" id="sidebar"></div>
     </div>
     <div class="row">
-      <div class="col" style="max-width: 17%;"></div>
-      <div class="col inputbox text-center">
-        <img src="../img/Icons/plusIcon.png" style="max-height: 17%;">Hinzufügen
+      <div class="col" id="sidebar"></div>
+      <div class="col inputbox text-center addbox">
+        <img src="../ressources/img/Icons/plusIcon.png" height="23vh">Hinzufügen
       </div>
-      <div class="col" style="max-width: 17%;"></div>
+      <div class="col" id="sidebar"></div>
     </div>
-
-
+    <div class="row">
+      <div class="col">
+        <br>
+      </div>
+    </div>
   </div>
 
   <script src="../js/Vermoegen.js"></script>

@@ -1,5 +1,19 @@
 .inputbox{
     background-color: #F2F2F2;
     padding: 2%;
+}
 
+.addbox{
+    max-height: 100%;
+}
+
+.textfield{
+    margin-bottom: 1%;
+}
+
+#deletebutton{
+    padding: 0.25%;
+    max-width: 2.5%;
+    margin-bottom: 2%;
+    /* Höhe der Box fehlerhaft*/
 }

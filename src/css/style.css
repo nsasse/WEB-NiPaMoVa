@@ -41,6 +41,10 @@ h2_header{
     border-style: none;
 }
 
+#sidebar{
+    max-width: 17%;
+}
+
 .header{
     background-color: #002f6c;
     padding: 0.5%;
