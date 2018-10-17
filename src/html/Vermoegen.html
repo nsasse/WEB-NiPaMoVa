@@ -26,12 +26,12 @@
       </div>
       <div class="col" id="sidebar"></div>
     </div>
-    <div class="row">
+    <div class="row" id="cloneId">
       <div class="col" id="sidebar"></div>
       <div class="col form-group inputbox">
-        <input type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-        <input type="number" class="form-control  textfield" placeholder="Betrag" value="" min="0" step="1"
-          data-number-stepfactor="100">
+        <input id="beschreibung" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+        <input id="betrag" type="number" class="form-control  textfield" placeholder="Betrag" value="" min="0" step="1"
+          data-number-stepfactor="100" onfocusout="calculateSum()">
       </div>
       <div class="col inputbox" id="deletebutton">
         <img src="../ressources/img/Icons/minusIcon.png" width="100%">
@@ -40,7 +40,7 @@
     </div>
     <div class="row">
       <div class="col" id="sidebar"></div>
-      <div class="col inputbox text-center addbox">
+      <div class="col inputbox text-center addbox" onclick="cloneId()">
         <img src="../ressources/img/Icons/plusIcon.png" height="23vh">Hinzufügen
       </div>
       <div class="col" id="sidebar"></div>
@@ -49,7 +49,9 @@
       <div class="col" id="sidebar"></div>
       <div class="col">
         <br>
-        <h3>Gesamt: 0€</h3>
+        <h3>Gesamt: </h3>
+        <h3 id="result">0</h3>
+        <h3>€</h3>
       </div>
       <div class="col" id="sidebar"></div>
     </div>

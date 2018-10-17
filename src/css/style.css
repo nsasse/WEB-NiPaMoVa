@@ -29,6 +29,7 @@ html, body{
 #bootstrap-overrides h3{
     color: #002f6c;
     font-size: 1.25em;
+    display: inline;
 }
 
 .textfield{
