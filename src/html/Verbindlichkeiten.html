@@ -1,24 +1,86 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/klickstrecke.css" media="screen" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <title>NiPaMoVa - Verbindlichkeiten</title>
-  </head>
-  <body id="bootstrap-overrides">
-    <div class="container">
-      <div class="row">
-        <div class="col header" >
-          <img src="../ressources/img/MiPaMoVa_Logo.png" height="95%"></a>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/klickstrecke.css" media="screen" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <title>NiPaMoVa - Verbindlichkeiten</title>
+</head>
+
+<body id="bootstrap-overrides">
+  <div class="container">
+    <div class="row">
+      <div class="col header" >
+        <img src="../ressources/img/MiPaMoVa_Logo.png" height="95%"></a>
       </div>
     </div>
+    <div class="row">
+      <div class="col" id="sidebar"></div>
+      <div class="col">
+        <br>
+        <h2> Geben Sie Ihre Verbindlichkeiten ein:</h2><br>
+        <br>
+      </div>
+      <div class="col" id="sidebar"></div>
+    </div> 
+    <div class="row" id="cloneID">
+      <div class="col" id="sidebar"></div>
+      <div class="col from-group inputbox">
+        <input id="beschreibung" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+        <input id="betrag" type="number" class="form-control textfield" placeholder="Betrag" vavlue="" min="0" step="1"
+        data-number-stepfacor="100" onfocusout="calculateSum()">
+      </div>
+      <div class="col inputbox" id="deletebutton">
+        <img src="../ressources/img/Icons/minusIcon.png" width="100%">
+      </div>
+      <div class="col" id="sidebar"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col" id="sidebar"></div>
+      <div class="col inputbox" onclick="cloneId()">
+        <nav class="navbar-center text-center navbar-light bg-inputbox">
+          <a class="navbar-brand" href="#">
+          <img src="../ressources/img/Icons/plusIcon.png" height="23vh" class="d-inline-block align-center" alt="">
+          Hinzufügen
+          </a>
+        </nav>  
+      </div>
+      <div class="col" id="sidebar"></div>
+    </div>
+    <div class="row" id="cloneID">
+    <div class="col" id="sidebar"></div>
+      <div class="col">
+        <br>
+        <h3>Gesamt</h3>
+        <h3 id="result">0</h3>
+        <h3>€</h3>
+      </div>
+    <div class="col" id="sidebar"></div>
+    </div>
+    <div class="row">
+        <div class="col" id="sidebar"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col" style="padding: 2.3%">
+          <button type="button" class="btn btn-mipamova" onclick="location.href ='Zusammenfassung.html';">Weiter</button>
+        </div>
+        <div class="col" id="sidebar"></div>
+      </div>
+      <div class="row">
+        <div class="col footer">
+          <a href="Kontakt.html">
+            <h4>Kontakt</h4>
+          </a>
+        </div>
+      </div>
+  </div>
 
-    <script src="../js/Verbindlichkeiten.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-  </body>
+  <script src="../js/Verbindlichkeiten.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
 </html>
