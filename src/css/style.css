@@ -63,11 +63,12 @@ html, body{
     position: fixed;
     height: 9vh;
     bottom: 0;
-    width: 100%;
     padding: 0.7%;
     background-color: #002f6c;
+    width: 85%;
     text-align: right;
-    /*An unterem Bildschirmrand fixieren funktioniert noch nicht*/
+    margin-left: 0%;
+    /*Breite des Footers passt noch nicht*/
 }
 
 /*Bootstrap Einstellungen*/
