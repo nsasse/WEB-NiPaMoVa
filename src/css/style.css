@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    /*Seitenrand muss noch entfernt werden*/
 }
 
 html, body{
@@ -14,8 +15,12 @@ html, body{
 
 }
 
+#main{
+    /*main*/
+}
+
 #bootstrap-overrides h1{
-    color: #ffffff;
+    color: #002f6c;
     font-size: 3em;
     font-weight: bold;
 }
