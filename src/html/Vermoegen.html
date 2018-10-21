@@ -26,21 +26,24 @@
       </div>
       <div class="col" id="sidebar"></div>
     </div>
-    <div class="row" id="cloneId">
-      <div class="col" id="sidebar"></div>
-      <div class="col form-group inputbox">
-        <input id="beschreibung" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-        <input id="betrag" type="number" class="form-control  textfield" placeholder="Betrag" value="" min="0"
-          onfocusout="calculateSum()">
+    <div id=boxarea>
+      <div class="row">
+        <div class="col" id="sidebar"></div>
+        <div class="col form-group inputbox">
+          <input id="beschreibung" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+          <input id="betrag" type="number" class="form-control  textfield" placeholder="Betrag" value="" min="0"
+            onfocusout="calculateSum()">
+        </div>
+        <div class="col inputbox" id="deletebutton">
+          <img src="../ressources/img/Icons/minusIcon.png" width="100%">
+        </div>
+        <div class="col" id="sidebar"></div>
       </div>
-      <div class="col inputbox" id="deletebutton">
-        <img src="../ressources/img/Icons/minusIcon.png" width="100%">
-      </div>
-      <div class="col" id="sidebar"></div>
+      <div id="boxes"></div>
     </div>
     <div class="row">
       <div class="col" id="sidebar"></div>
-      <div class="col inputbox text-center addbox" onclick="cloneId()">
+      <div class="col inputbox text-center addbox" onclick="addBox()">
         <img src="../ressources/img/Icons/plusIcon.png" height="23vh">Hinzufügen
       </div>
       <div class="col" id="sidebar"></div>
