@@ -34,17 +34,16 @@
         <!--Sidebar left-->
         <div class="col" id="sidebar"></div>
         <div class="col form-group inputbox">
-          <input id="description" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-          <input id="amount" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
-            onfocusout="calculateSum()">
+          <input id="description 1" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+          <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
+            oninput="calculateSum()">
         </div>
         <div class="col inputbox" id="deletebutton">
-          <img src="../ressources/img/Icons/minusIcon.png" width="100%">
+          <img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">
         </div>
         <!--Sidebar right-->
         <div class="col" id="sidebar"></div>
       </div>
-      <div id="boxes"></div>
     </div>
     <div class="row">
       <div class="col" id="sidebar"></div>
