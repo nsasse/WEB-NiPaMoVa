@@ -43,6 +43,18 @@ html, body{
     font-size: 1.4em;
 }
 
+#bootstrap-overrides h5{
+    color: #002f6c;
+    font-size:0.9em;
+}
+
+#bootstrap-overrides h6{
+    color: #ffffff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+
 .textfield{
     color: #4F83CC;
     font-size: 1em;
