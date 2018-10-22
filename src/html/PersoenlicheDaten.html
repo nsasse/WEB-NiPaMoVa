@@ -27,11 +27,43 @@
     </div>
     <div class="row" id="cloneId">
       <div class="col" id="sidebar"></div>
-      <div class="col form-group inputbox">
+      <div  class="col form-group inputbox">
         <input id="vorname" type="text" class="form-control textfield" placeholder="Vorname" value="">
         <input id="nachname" type="text" class="form-control  textfield" placeholder="Nachname" value="">
         <input id="geburtsdatum" type="text" class="form-control  textfield" placeholder="Geburtsdatum" value="">
         <input id="e-mail" type="email" class="form-control  textfield" placeholder="E-mail" value="">
+        <div class="side-by-side">
+          Sind Sie verheiratet?
+          Ja
+          <input type="radio" onclick="heiraten ()" id="ja" name="ehe" >
+          Nein 
+          <input type="radio" onclick="heiraten ()" id="nein" name="ehe">
+        </div>
+        <input id="namedesehegattin" type="text" class="form-control  textfield" placeholder="Name des Ehegatten/in" value="">
+        <br>
+        <div class="side-by-side">
+            Haben Sie Kinder?
+            Ja
+            <input type="radio" onclick="kinder ()" id="ja2" name="ehe2" >
+            Nein 
+            <input type="radio" onclick="kinder (); nullFields ()" id="nein2" name="ehe2">
+          </div>
+          <input id="anzahlderkinder" type="number" onchange="addFields ()" onclick="addFields ()" min="1" class="form-control  textfield" placeholder="Anzahl der Kinder" >
+
+          <div id="container">
+
+          </div>
+
+          
+
+        
+        
+          
+      
+      
+      
+      
+      
       </div>
 
 
