@@ -12,7 +12,6 @@ html, body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1em;
     height: 100%;
-
 }
 
 #bootstrap-overrides h1{
@@ -49,7 +48,6 @@ html, body{
     /*Style für Label*/
     color: #002f6c;
     display:inline;
-    
 }
 
 .textfield{
@@ -134,10 +132,3 @@ html, body{
     color: #002F6C; 
     background-color: #FFFFFF; 
   }
-
-/*Überschriften */
-
-.seitentitel {
-    font-size: 2em !important;
-
- }
