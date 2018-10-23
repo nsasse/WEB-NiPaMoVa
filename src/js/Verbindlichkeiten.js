@@ -1,6 +1,7 @@
 
 let boxList = document.getElementsByClassName('amount');
 let boxCounter = 1;
+let boxReset = document.createElement('div');
 
 function calculateSum() {
 
@@ -16,12 +17,11 @@ function calculateSum() {
 }
 
 function removeBox() {
-    let boxReset = "";
-    document.getElementById("inputbox").innerHTML = boxReset;
+    let boxnummer=document.getElementById(boxReset.id);
+    boxnummer.removeChild(boxnummer.appendChild);   
 }
 
 function addBox() {
-    /*ID vergabe muss noch ergänzt werden*/
     boxCounter++;
 
     let input = document.createElement('div');
@@ -44,4 +44,6 @@ function addBox() {
         '</div>';
 
     document.getElementById('box' + boxCounter).innerHTML = box;
+
+    boxReset.id=input.id
 }
