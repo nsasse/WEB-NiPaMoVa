@@ -4,15 +4,15 @@ let neinButton = document.getElementById("nein");
 let ehegatt = document.getElementById("namedesehegattin");
 
 
-heiraten(); 
+heiraten();
 
-function heiraten () {
+function heiraten() {
 
     if (jaButton.checked) {
         ehegatt.style.display = "block";
     }
 
-    else{
+    else {
         ehegatt.style.display = "none";
     }
 
@@ -25,42 +25,62 @@ let kind = document.getElementById("anzahlderkinder");
 
 kinder();
 
-function kinder (){
+function kinder() {
 
-if (ja2Button.checked){
-    kind.style.display = "block";
+    if (ja2Button.checked) {
+        kind.style.display = "block";
+    }
+
+    else {
+        kind.style.display = "none";
+    }
+
 }
 
-else{
-    kind.style.display = "none";
-}
-
-}
-
-function addFields () {
+function addFields() {
     let anzahl = document.getElementById("anzahlderkinder").value;
 
     let container = document.getElementById("container");
 
-    container.innerHTML  = "";
-    for (i=1; i<=anzahl; i++) {
+    container.innerHTML = "";
+    for (i = 1; i <= anzahl; i++) {
 
-    container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield" placeholder="Name des Kindes" value="">';
+        container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield" placeholder="Name des Kindes" value="">';
 
-  
-    
+
+
     }
 
 
 }
 
-function nullFields () {
+function nullFields() {
 
     let container = document.getElementById("container");
 
-    container.innerHTML  = "";
+    container.innerHTML = "";
 
-    
 
+
+
+}
+
+
+
+function ueberpruefung() {
+
+let vorname1 = document.getElementById("vorname").value;
+let nachname1 = document.getElementById("nachname").value;
+let geburtstag1 = document.getElementById("geburtsdatum").value;
+let email1 = document.getElementById("e-mail").value;
+console.log(vorname1 + nachname1 + geburtstag1 + email1)
+    if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "")
+
+    window.alert("Bitte Eingabe überprüfen!" );   
+
+    else {
+
+        window.location = "../Vermögen.html";
+    }
 
 }
