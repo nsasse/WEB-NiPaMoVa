@@ -25,110 +25,108 @@
     <div class="fixed-top">
     </div>
     <img src="../ressources/img/userIcon.png" height="95%"></a>
-  </div>
 
 
 
-  <div class="col" id="sidebar"></div>
-
-  <div class="row" id="cloneId">
     <div class="col" id="sidebar"></div>
-    <div class="col form-group inputbox">
 
-      <div class="row">
-        <div class="col-md-1">
+    <div class="row" id="cloneId">
+      <div class="col" id="sidebar"></div>
+      <div class="col form-group inputbox">
 
-        </div>
-        <div class="col-md-5">
-          <div class="centerBlock">
-            <div class="row">
-              <h6>Anrede:</h6>
-              <div id="selecttitel" class="col-md-6 leftmargin">
-                <div class="styled-select slate">
-                  <select id="anrede">
-                    <option value="" disabled selected>Bitte auswählen</option>
-                    <option value="Frau">Frau</option>
-                    <option value="Herr">Herr</option>
-                  </select>
+        <div class="row">
+          <div class="col-md-1">
+
+          </div>
+          <div class="col-md-5">
+            <div class="centerBlock">
+              <div class="row">
+                <h6>Anrede:</h6>
+                <div id="selecttitel" class="col-md-6 leftmargin">
+                  <div class="styled-select slate">
+                    <select id="anrede">
+                      <option value="" disabled selected>Bitte auswählen</option>
+                      <option value="Frau">Frau</option>
+                      <option value="Herr">Herr</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="centerBlock">
+              <div class="row">
+                <h6>Titel:</h6>
+                <div class="col-md-6 leftmaring">
+                  <div class="styled-select slate">
+                    <select id="anrede">
+                      <option value="" disabled selected>Bitte auswählen</option>
+                      <option value="Dr.">Dr.</option>
+                      <option value="Kein titel">Kein Titel</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-1">
           </div>
         </div>
 
-        <div class="col-md-5">
-          <div class="centerBlock">
-            <div class="row">
-              <h6>Titel:</h6>
-              <div class="col-md-6 leftmaring">
-                <div class="styled-select slate">
-                  <select id="anrede">
-                    <option value="" disabled selected>Bitte auswählen</option>
-                    <option value="Dr.">Dr.</option>
-                    <option value="Kein titel">Kein Titel</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <br>
+        </select>
+        <input id="vorname" type="text" class="form-control textfield" placeholder="Vorname" value="">
+        <input id="nachname" type="text" class="form-control  textfield" placeholder="Nachname" value="">
+        <input id="geburtsdatum" type="text" class="form-control  textfield" placeholder="Geburtsdatum" value="">
+        <input id="e-mail" type="email" class="form-control  textfield" placeholder="E-mail" value="">
+        <div class="side-by-side">
+          <h6>Sind Sie verheiratet?</h6>
+          Ja
+          <input type="radio" onclick="heiraten ()" id="ja" name="ehe">
+          Nein
+          <input type="radio" onclick="heiraten ()" id="nein" name="ehe">
         </div>
-        <div class="col-md-1">
+        <input id="namedesehegattin" type="text" class="form-control  textfield" placeholder="Name des Ehegatten/in"
+          value="">
+        <br>
+        <div class="side-by-side">
+          <h6>Haben Sie Kinder?</h6>
+          Ja
+          <input type="radio" onclick="kinder ()" id="ja2" name="ehe2">
+          Nein
+          <input type="radio" onclick="kinder (); nullFields ()" id="nein2" name="ehe2">
         </div>
-       </div>
+        <input id="anzahlderkinder" type="number" onchange="addFields ()" onclick="addFields ()" min="1" class="form-control  textfield"
+          placeholder="Anzahl der Kinder">
 
-      <br>
-      </select>
-      <input id="vorname" type="text" class="form-control textfield" placeholder="Vorname" value="">
-      <input id="nachname" type="text" class="form-control  textfield" placeholder="Nachname" value="">
-      <input id="geburtsdatum" type="text" class="form-control  textfield" placeholder="Geburtsdatum" value="">
-      <input id="e-mail" type="email" class="form-control  textfield" placeholder="E-mail" value="">
-      <div class="side-by-side">
-        <h6>Sind Sie verheiratet?</h6>
-        Ja
-        <input type="radio" onclick="heiraten ()" id="ja" name="ehe">
-        Nein
-        <input type="radio" onclick="heiraten ()" id="nein" name="ehe">
+        <div id="container">
+
+        </div>
       </div>
-      <input id="namedesehegattin" type="text" class="form-control  textfield" placeholder="Name des Ehegatten/in"
-        value="">
-      <br>
-      <div class="side-by-side">
-        <h6>Haben Sie Kinder?</h6>
-        Ja
-        <input type="radio" onclick="kinder ()" id="ja2" name="ehe2">
-        Nein
-        <input type="radio" onclick="kinder (); nullFields ()" id="nein2" name="ehe2">
+
+
+      <div class="col" id="sidebar"></div>
+    </div>
+    <div class="row">
+      <div class="col" id="sidebar"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col" style="padding: 2.3%">
+        <button type="button" class="btn btn-mipamova" onclick="location.href ='Vermoegen.html';">Weiter</button>
       </div>
-      <input id="anzahlderkinder" type="number" onchange="addFields ()" onclick="addFields ()" min="1" class="form-control  textfield"
-        placeholder="Anzahl der Kinder">
-
-      <div id="container">
-
+      <div class="col" style="max-width: 33.33%;"></div>
+    </div>
+    <div class="row">
+      <div class="col footer">
+        <a href="Kontakt.html">
+          <h4>Kontakt</h4>
+        </a>
       </div>
     </div>
-
-
-    <div class="col" id="sidebar"></div>
-  </div>
-  <div class="row">
-    <div class="col" id="sidebar"></div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col" style="padding: 2.3%">
-      <button type="button" class="btn btn-mipamova" onclick="location.href ='Vermoegen.html';">Weiter</button>
-    </div>
-    <div class="col" style="max-width: 33.33%;"></div>
-  </div>
-  <div class="row">
-    <div class="col footer">
-      <a href="Kontakt.html">
-        <h4>Kontakt</h4>
-      </a>
-    </div>
-  </div>
-  </div>
   </div>
 
 
