@@ -16,9 +16,6 @@ html, body{
 }
 
 #main{
-    /*main*/
-}
-
 #bootstrap-overrides h1{
     color: #002f6c;
     font-size: 3em;
@@ -38,9 +35,17 @@ html, body{
 }
 
 #bootstrap-overrides h4{
-    /*Style für Text auf blauen Hintergrund*/
+    /*Style für Text auf Button*/
     color: #FFFFFF;
     font-size: 1.4em;
+}
+
+#bootstrap-overrides h5{
+    /*Style für Text auf Header*/
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 2.5%;
 }
 
 .textfield{
@@ -58,6 +63,7 @@ html, body{
 }
 
 .header{
+    display: inline;
     position: sticky;
     top: 0vh;
     background-color: #002f6c;
