@@ -39,26 +39,13 @@ else{
 
 function addFields () {
     let anzahl = document.getElementById("anzahlderkinder").value;
-    // Container <div> where dynamic content will be placed
 
     let container = document.getElementById("container");
 
     container.innerHTML  = "";
     for (i=1; i<=anzahl; i++) {
 
- 
- /*       let input = document.createElement("input");
-    input.type = "text";
-    input.name = "child" + i;
-    input.id = "child" + i;
-    input.class = "form-control textfield";
-    input.value = "";
-    input.placeholder = "Name des " + i + ". Kindes"; 
-
-    //Addieren das eingebefeld
-   container.appendChild(input); */
-
-    container.innerHTML += '<input id="vorname" type="text" class="form-control textfield" placeholder="Vorname" value="">';
+    container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield" placeholder="Name des Kindes" value="">';
 
   
     
