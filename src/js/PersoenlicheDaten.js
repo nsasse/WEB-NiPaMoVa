@@ -80,7 +80,7 @@ console.log(vorname1 + nachname1 + geburtstag1 + email1)
 
     else {
 
-        window.location = "../Vermögen.html";
+        self.location.href = "../html/Vermoegen.html";
     }
 
 }
