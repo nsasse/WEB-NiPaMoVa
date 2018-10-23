@@ -45,6 +45,12 @@ html, body{
     font-size: 2em;
     padding-top: 2.5%;
 }
+#bootstrap-overrides h6{
+    /*Style für Label*/
+    color: #002f6c;
+    display:inline;
+    
+}
 
 .textfield{
     color: #4F83CC;
