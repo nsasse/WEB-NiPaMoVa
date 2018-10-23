@@ -45,6 +45,12 @@ html, body{
     font-size: 2em;
     padding-top: 2.5%;
 }
+#bootstrap-overrides h6{
+    /*Style für Label*/
+    color: #002f6c;
+    display:inline;
+    
+}
 
 .textfield{
     color: #4F83CC;
@@ -129,55 +135,7 @@ html, body{
     background-color: #FFFFFF; 
   }
 
-
-  /*in PersoenlicheDaten.html style für select dings*/
-  .centerBlock { 
-    display:table-row;
-    width:auto;
-    text-align: center;
-
-}
-
-
-.styled-select {
-    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
-    height: 29px;
-    overflow: hidden;
-    width: 240px;
- }
- 
- .styled-select select {
-    background: transparent;
-    border: none;
-    font-size: 14px;
-    height: 29px;
-    padding: 5px; /* If you add too much padding here, the options won't show in IE */
-    width: 268px;
- }
- 
- .styled-select.slate {
-    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
-    height: 34px;
-    width: 240px;
- }
- 
- .styled-select.slate select {
-    border: 1px solid #ccc;
-    font-size: 16px;
-    height: 34px;
-    width: 268px;
- }
-
- #selecttitel {
-    margin-left: 0px !important;
-    display: table-row !important;
-    margin-right: auto;
-    width:auto;
-    align-content: left; 
-}
-
-
-
+/*Überschriften */
 
 .seitentitel {
     font-size: 2em !important;

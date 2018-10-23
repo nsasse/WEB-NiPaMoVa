@@ -13,12 +13,11 @@
         <div class="col header" >
           <a href="../index.html"><img src="../ressources/img/MiPaMoVa_Logo.png" height="95%"></a>
         </div>
-        <div class="col header" >
-            <p class="align-center">
-                <p class="seitentitel col text-center" style="color:white">Testamentserstellung</p>
+        <div class="col header text-center">
+            <h5>Testamentserstellung</h5>
           </div>
           <div class="col header">
-            </div>
+          </div>
       </div>
       <div class="fixed-top">
         
@@ -42,7 +41,7 @@
           <div class="col-md-5">
             <div class="centerBlock">
               <div class="row">
-                    Anrede:
+                    <h6>Anrede:</h6>
                 <div id="selecttitel" class="col-md-6 leftmargin">
                     <div class="styled-select slate">
                         <select id="anrede">
@@ -60,7 +59,7 @@
             <div class="col-md-5">
                 <div class="centerBlock">
                   <div class="row">
-                        Titel:
+                        <h6>Titel:</h6>
                     <div class="col-md-6 leftmaring">
                         <div class="styled-select slate">
                             <select id="anrede">
@@ -94,19 +93,19 @@
         <input id="geburtsdatum" type="text" class="form-control  textfield" placeholder="Geburtsdatum" value="">
         <input id="e-mail" type="email" class="form-control  textfield" placeholder="E-mail" value="">
         <div class="side-by-side">
-          Sind Sie verheiratet?
+          <h6>Sind Sie verheiratet?</h6>
           Ja
           <input type="radio" onclick="heiraten ()" id="ja" name="ehe" >
-          Nein 
+          Nein
           <input type="radio" onclick="heiraten ()" id="nein" name="ehe">
         </div>
         <input id="namedesehegattin" type="text" class="form-control  textfield" placeholder="Name des Ehegatten/in" value="">
         <br>
         <div class="side-by-side">
-            Haben Sie Kinder?
+            <h6>Haben Sie Kinder?</h6>
             Ja
             <input type="radio" onclick="kinder ()" id="ja2" name="ehe2" >
-            Nein 
+            Nein
             <input type="radio" onclick="kinder (); nullFields ()" id="nein2" name="ehe2">
           </div>
           <input id="anzahlderkinder" type="number" onchange="addFields ()" onclick="addFields ()" min="1" class="form-control  textfield" placeholder="Anzahl der Kinder" >
