@@ -31,18 +31,24 @@
       </div>
       <div class="col" id="sidebar"></div>
     </div> 
-    <div class="row" id="cloneID">
-      <div class="col" id="sidebar"></div>
-      <div class="col from-group inputbox">
-        <input id="beschreibung" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-        <input id="betrag" type="number" class="form-control textfield" placeholder="Betrag" vavlue="" min="0" step="1"
-        data-number-stepfacor="100" onfocusout="calculateSum()">
+    <div id=area>
+        <!--Box-->
+        <div class="row">
+          <!--Sidebar left-->
+          <div class="col" id="sidebar"></div>
+          <div class="col form-group inputbox">
+            <input id="description 1" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+            <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
+              oninput="calculateSum()">
+          </div>
+          <div class="col inputbox" id="deletebutton">
+            <img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">
+          </div>
+          <!--Sidebar right-->
+          <div class="col" id="sidebar"></div>
+        </div>
       </div>
-      <div class="col inputbox" id="deletebutton">
-        <img src="../ressources/img/Icons/minusIcon.png" width="100%">
-      </div>
-      <div class="col" id="sidebar"></div>
-    </div>
+   
     <br>
     <div class="row">
         <div class="col" id="sidebar"></div>
