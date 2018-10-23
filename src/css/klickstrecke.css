@@ -61,3 +61,7 @@
     width:auto;
     align-content: left; 
 }
+
+input[required] {
+    border-color: red;
+  }
