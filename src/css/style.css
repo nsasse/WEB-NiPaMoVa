@@ -40,6 +40,7 @@ html, body{
 }
 
 #bootstrap-overrides h5{
+<<<<<<< HEAD
     /*Style für Text auf Header*/
     color: #FFFFFF;
     font-size: 2em;
@@ -47,6 +48,19 @@ html, body{
     padding-top: 2.5%;
 }
 
+=======
+    color: #002f6c;
+    font-size:0.9em;
+}
+
+#bootstrap-overrides h6{
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+>>>>>>> 39dd533f65089c7a26c6ac772c5ad740775f29a2
 .textfield{
     color: #4F83CC;
     font-size: 1em;
