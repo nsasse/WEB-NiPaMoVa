@@ -1,6 +1,9 @@
 # WEB-NiPaMoVa
 Nico, Patrick, Monika, Vanessa
 
+TO-DO:
+Media Queries erstellen
+
 
 Farbcodes:
     Blautöne:
