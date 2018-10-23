@@ -76,7 +76,7 @@ let email1 = document.getElementById("e-mail").value;
 console.log(vorname1 + nachname1 + geburtstag1 + email1)
     if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "")
 
-    window.alert("Bitte Eingabe überprüfen!" );   
+    window.alert("Bitte überprüfen Sie Ihre Eingaben!" );   
 
     else {
 
