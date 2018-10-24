@@ -45,7 +45,7 @@ function addFields() {
     container.innerHTML = "";
     for (i = 1; i <= anzahl; i++) {
 
-        container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield" placeholder="Name des Kindes" value="">';
+        container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">';
 
 
 
@@ -73,14 +73,38 @@ let vorname1 = document.getElementById("vorname").value;
 let nachname1 = document.getElementById("nachname").value;
 let geburtstag1 = document.getElementById("geburtsdatum").value;
 let email1 = document.getElementById("e-mail").value;
-console.log(vorname1 + nachname1 + geburtstag1 + email1)
-    if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "")
+let anrede = document.getElementById("anrede").value;
+let titel = document.getElementById("titel").value;
+let ehegattja = document.getElementById("ja").checked;
+let ehegattnein = document.getElementById("nein").checked; 
+let kinderja = document.getElementById("ja2").checked;
+let kindernein = document.getElementById("nein2").checked;
+let namedesehegattin = document.getElementById("namedesehegattin").value;
+let kinderzahl = document.getElementById("anzahlderkinder").value;
 
-    window.alert("Bitte überprüfen Sie Ihre Eingaben!" );   
+console.log(vorname1 + nachname1 + geburtstag1 + email1);
+    if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "" 
+    || (!ehegattja && !ehegattnein) || (!kinderja && !kindernein) || anrede == "" ||  titel == "" 
+    || (namedesehegattin == "" && ehegattja) || !kindernamepruefung() || (kinderja && kinderzahl == "")) {
+
+    window.alert("Bitte überprüfen Sie Ihre Eingaben!" );  
+}
 
     else {
 
         self.location.href = "../html/Vermoegen.html";
     }
+
+}
+
+function kindernamepruefung() {
+    let kindername = document.getElementsByClassName("namedesKindes");
+    let ausgefuellt = true;
+    for (var i = 0; i < kindername.length; i++) {
+        if(kindername[i].value == "") {
+        ausgefuellt = false;
+    }
+      }
+    return ausgefuellt;
 
 }
