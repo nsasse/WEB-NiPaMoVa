@@ -1,16 +1,17 @@
 
-let boxList = document.getElementsByClassName('amount');
+let amountList = document.getElementsByClassName('amount');
+let descriptionList = document.getElementsByClassName('description');
 let boxCounter = 1;
 
 function calculateSum() {
 
     let result = 0;
-    for (let index = 0; boxList.length > index; index++) {
-        let boxValue = parseInt(boxList[index].value);
-        if (boxValue === "undefined") {
+    for (let index = 0; amountList.length > index; index++) {
+        let amountValue = parseInt(amountList[index].value);
+        if (amountValue === "undefined") {
             //auf undefined prüfen funktioniert nicht
         }
-        result = result + boxValue;
+        result = result + amountValue;
     }
     document.getElementById('result').innerHTML = result;
 }
@@ -44,4 +45,30 @@ function addBox() {
         '</div>';
 
     document.getElementById('box' + boxCounter).innerHTML = box;
+}
+
+function submit() {
+    let forwarding = true;
+
+    for (let index = 0; amountList.length > index; index++) {
+        let amountValue = parseInt(amountList[index].value);
+        if (isNaN(amountValue)) {
+            forwarding = false;
+        }
+    }
+
+    for (let index = 0; descriptionList > index; index++) {
+        let descriptionValue = descriptionList[index].value;
+        //Überprüfung funktioniert nicht
+        if (descriptionValue == "") {
+            forwarding = false;
+        }
+    }
+
+    if (forwarding == false) {
+        window.alert("Bitte überprüfen Sie Ihre Eingaben!");
+    }
+    else {
+        self.location.href = "../html/Verbindlichkeiten.html";
+    }  
 }
