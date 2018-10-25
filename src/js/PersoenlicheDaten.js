@@ -82,7 +82,7 @@ let kindernein = document.getElementById("nein2").checked;
 let namedesehegattin = document.getElementById("namedesehegattin").value;
 let kinderzahl = document.getElementById("anzahlderkinder").value;
 
-console.log(vorname1 + nachname1 + geburtstag1 + email1);
+console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überprüfung */
     if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "" 
     || (!ehegattja && !ehegattnein) || (!kinderja && !kindernein) || anrede == "" ||  titel == "" 
     || (namedesehegattin == "" && ehegattja) || !kindernamepruefung() || (kinderja && kinderzahl == "")) {
