@@ -1,0 +1,9 @@
+.zHeader{
+        background-color: #002f6c;
+        height: 12vh;
+        padding: 20px;
+}
+
+#bootstrap-overrides .logo {
+        max-width: 225px;
+}
