@@ -10,7 +10,7 @@
   <title>NiPaMoVa - Zusammenfassung</title>
 </head>
 
-<body id="bootstrap-overrides">
+<body id="bootstrap-overrides" onload="loadTestamentData()">
   <nav class="navbar navbar-expand-lg zHeader">
     <a class="navbar-brand" href="#">
       <img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo">
@@ -20,10 +20,11 @@
 
   <!--Datenanzeige-->
   <div class="row infoContainer justify-content-md-center">
-    <div class="col-8 bottomMargin">
+    <div class="col-8">
       <h2>Bitte überprüfen sie ihre Angaben:</h2>
     </div>
-    <div class="col-8">
+    <!--Persönliche Daten-->
+    <div class="col-8 topMargin">
       <h3>Ihre persönlichen Daten:</h3>
     </div>
     <div class="col-8">
@@ -52,8 +53,12 @@
         </div>
       </div>
     </div>
+    <!--Vermögenswerte-->
+    <div class="col-8 topMargin">
+      <h3>Ihre Vermögensgegenstände:</h3>
+    </div>
   </div>
-
+  </div>
   <!--     <div class="col" id="sidebar"></div>    
       <div class="row">
         <div class="col" id="sidebar"></div>
