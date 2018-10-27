@@ -1,5 +1,5 @@
 let Testament = class {
-    constructor(anrede,firstName, lastName, email, personen,vermoegen,verbindlichkeiten,titel) {
+    constructor(anrede, firstName, lastName, email, personen, vermoegen, verbindlichkeiten, titel) {
         this.anrede = anrede;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,9 +14,25 @@ let Testament = class {
 }
 
 let Person = class {
-    constructor(typ,name) {
+    constructor(typ, name) {
         this.typ = typ;
         this.name = name;
+    }
+
+    printInformation(area, count) {
+        let input = document.createElement('div');
+        input.class = 'row';
+        input.id = area + 'row' + count;
+        document.getElementById(area).appendChild(input);
+
+
+        let html =
+            '<div class="row">' +
+            '<div class="col-1" id="typ">' + this.typ + ':</div>' +
+            '<div class="col-6" id="name">' + this.name + '</div>' +
+            '</div>';
+
+        document.getElementById(area + 'row' + count).innerHTML = html;
     }
 }
 
@@ -31,7 +47,7 @@ let Wertinformation = class {
         input.class = 'row';
         input.id = area + 'row' + count;
         document.getElementById(area).appendChild(input);
-    
+
 
         let html =
             '<div class="row">' +
@@ -51,23 +67,23 @@ let vermoegen = [
 ]
 
 let verbindlichkeiten = [
-    new Wertinformation('Schulden Peter',232),
-    new Wertinformation('Schulden Klaus',2423)
+    new Wertinformation('Schulden Peter', 232),
+    new Wertinformation('Schulden Klaus', 2423)
 ]
 
 let personen = [
-    new Person('Frau','Petra Parker'),
-    new Person('Kind','Lustig Lol'),
-    new Person('Kind','Paddi Waddi')
+    new Person('Frau', 'Petra Parker'),
+    new Person('Kind', 'Lustig Lol'),
+    new Person('Kind', 'Paddi Waddi')
 ]
 
 
-let testament = new Testament('Herr','Peter', 'Mayer', 'Peter.Mayer@gmx.de', personen,vermoegen, verbindlichkeiten);
+let testament = new Testament('Herr', 'Peter', 'Mayer', 'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
 
 function loadTestamentData() {
     //Persönliche Daten
     document.getElementById("anrede").innerHTML = testament.anrede;
-    if(testament.titel != undefined) {
+    if (testament.titel != undefined) {
         document.getElementById("titel").innerHTML = testament.titel;
     }
     document.getElementById("vorname").innerHTML = testament.firstName;
@@ -75,6 +91,10 @@ function loadTestamentData() {
     document.getElementById("email").innerHTML = testament.email;
 
     //Familie
+    personen.forEach(function (currentValue, index) {
+        currentValue.printInformation("personen", index + 1);
+    });
+
 
     //Vermögen
     vermoegen.forEach(function (currentValue, index) {
@@ -86,7 +106,7 @@ function loadTestamentData() {
         currentValue.printDescription("verbindlichkeiten", index + 1);
     });
 
-    
+
 
     console.log("loaded");
 }
