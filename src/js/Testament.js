@@ -1,8 +1,9 @@
 let Testament = class {
-    constructor(anrede, firstName, lastName, email, personen, vermoegen, verbindlichkeiten, titel) {
+    constructor(anrede, firstName, lastName,birthdate, email, personen, vermoegen, verbindlichkeiten, titel) {
         this.anrede = anrede;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.birthdate = birthdate;
         this.email = email;
         this.personen = personen;
         this.vermoegen = vermoegen;
@@ -78,7 +79,8 @@ let personen = [
 ]
 
 
-let testament = new Testament('Herr', 'Peter', 'Mayer', 'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
+let testament = new Testament('Herr', sessionStorage.vorname, 'Mayer','22.12.1999', 
+            'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
 
 function loadTestamentData() {
     //Persönliche Daten
@@ -88,6 +90,7 @@ function loadTestamentData() {
     }
     document.getElementById("vorname").innerHTML = testament.firstName;
     document.getElementById("nachname").innerHTML = testament.lastName;
+    document.getElementById("birthdate").innerHTML = testament.birthdate;
     document.getElementById("email").innerHTML = testament.email;
 
     //Familie

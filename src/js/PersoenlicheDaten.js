@@ -7,7 +7,6 @@ let ehegatt = document.getElementById("namedesehegattin");
 heiraten();
 
 function heiraten() {
-
     if (jaButton.checked) {
         ehegatt.style.display = "block";
     }
@@ -15,9 +14,8 @@ function heiraten() {
     else {
         ehegatt.style.display = "none";
     }
-
-
 }
+
 let ja2Button = document.getElementById("ja2");
 let nein2Button = document.getElementById("nein2");
 
@@ -44,14 +42,8 @@ function addFields() {
 
     container.innerHTML = "";
     for (i = 1; i <= anzahl; i++) {
-
         container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">';
-
-
-
     }
-
-
 }
 
 function nullFields() {
@@ -59,10 +51,6 @@ function nullFields() {
     let container = document.getElementById("container");
 
     container.innerHTML = "";
-
-
-
-
 }
 
 
@@ -89,12 +77,21 @@ console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überpr�
 
     window.alert("Bitte überprüfen Sie Ihre Eingaben!" );  
 }
-
     else {
+        sessionStorage.vorname = vorname1;
+        sessionStorage.nachname = nachname1;
+        sessionStorage.geburtstag = geburtstag1;
+        sessionStorage.email = email1;
+        sessionStorage.anrede = anrede;
+        sessionStorage.titel = titel;
+
+        if(ehegattja) {
+            
+        }
+
 
         self.location.href = "../html/Vermoegen.html";
     }
-
 }
 
 function kindernamepruefung() {
