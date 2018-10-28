@@ -1,52 +1,128 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/abschluss.css" media="screen" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <title>NiPaMoVa - Zusammenfassung</title>
-  </head>
-  <body id="bootstrap-overrides">
-      <div class="bg">
-        <div class="container">
-          <div class="row">
-            <div class="col header">
-              <img src="../ressources/img/MiPaMoVa_Logo.png" height="95%"></a>
-            </div>
-            <div class="col header text-center">
-                <h5>Zusammenfassung</h5>
-              </div>
-              <div class="col header">
-              </div>
-          </div>
 
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="../css/zusammenfassung.css" media="screen" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <title>NiPaMoVa - Zusammenfassung</title>
+</head>
 
+<body id="bootstrap-overrides" onload="loadTestamentData()">
+  <nav class="navbar navbar-expand-lg zHeader">
+    <a class="navbar-brand" href="#">
+      <img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo">
+    </a>
+    <h5 class="headerTitle">Zusammenfassung</h5>
+  </nav>
 
-
-          <div class="col" id="sidebar"></div>
-      
+  <!--Datenanzeige-->
+  <div class="row infoContainer justify-content-md-center">
+    <div class="col-8">
+      <h2>Bitte überprüfen sie ihre Angaben:</h2>
+    </div>
+    <!--Persönliche Daten-->
+    <div class="col-8 topMargin bottomMargin">
+      <h3>Ihre persönlichen Daten:</h3>
+    </div>
+    <div class="col-8">
       <div class="row">
-        <div class="col" id="sidebar"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-          <div class="col" style="padding: 2.3%">
-            <button type="button" class="btn btn-mipamova" style="position:sticky" onclick="location.href ='Abschluss.html';">Bestätigen</button>
-          </div>           
-          <div class="col" style="max-width: 33.33%;"></div>
-      </div>  
+        <div class="col-2">
+          Anrede:
+        </div>
+        <div class="col-10" id="anrede">
+          -
+        </div>
+      </div>
       <div class="row">
-        <p>
-          <a href="Kontakt.html" style="color:white">
-            <h4 class="col footer" style="position: sticky">Kontakt</h4> 
-          </a>
-        </p>
+        <div class="col-2">
+          Titel:
+        </div>
+        <div class="col-10" id="titel">
+          -
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          Vorname:
+        </div>
+        <div class="col-10" id="vorname">
+          Max (Platzhalter)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          Nachname:
+        </div>
+        <div class="col-10" id="nachname">
+          Mustermann (Platzhalter)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          Geburtsdatum:
+        </div>
+        <div class="col-10" id="birthdate">
+          22.01.1992 (Platzhalter)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          E-Mail:
+        </div>
+        <div class="col-10" id="email">
+          Max.m@gmx.de (Platzhalter)
+        </div>
       </div>
     </div>
+    <!--Familie-->
+    <div class="col-8 topMargin bottomMargin">
+      <h3>Ihre Familie:</h3>
+    </div>
+    <div class="col-8" id="personen">
+    </div>
+    <!--Vermögenswerte-->
+    <div class="col-8 topMargin bottomMargin">
+      <h3>Ihre Vermögensgegenstände:</h3>
+    </div>
+    <div class="col-8" id="vermoegen">
+    </div>
+    <!--Vermögenswerte-->
+    <div class="col-8 topMargin bottomMargin">
+      <h3>Ihre Verbindlichkeiten:</h3>
+    </div>
+    <div class="col-8" id="verbindlichkeiten">
+    </div>
+    <!--WeiterButton-->
+    <div class="col-8 topMargin bottomMargin">
+    </div>
+    <div class="col-6">
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-mipamova" onclick="location.href ='Abschluss.html';">
+        Bestätigen
+      </button>
+    </div>
+  </div>
 
-    <script src="../js/Zusammenfassung.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-  </body>
+  <footer class="zFooter">
+    <div class="container">
+      <a href="Kontakt.html">
+        <span class="footerLink">Kontakt</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="../js/Testament.js"></script>
+  <script src="../js/Zusammenfassung.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
