@@ -22,6 +22,23 @@
       <div class="col header">
       </div>
     </div>
+    <div class="row text-center">
+        <div class="col statusbarInactiv border">
+          <a href="PersoenlicheDaten.html">
+            <h4>Persönliche Daten</h4>
+          </a>
+        </div>
+        <div class="col statusbarInactiv border">
+          <a href="Vermoegen.html">
+            <h4>Vermögen</h4>
+          </a>
+        </div>
+        <div class="col statusbarActiv border">
+          <a href="Verbindlichkeiten.html">
+            <h4>Verbindlichkeiten</h4>
+          </a>
+        </div>
+      </div>
     <div class="row">
       <div class="col" id="sidebar"></div>
       <div class="col">
@@ -32,22 +49,22 @@
       <div class="col" id="sidebar"></div>
     </div> 
     <div id=area>
-        <!--Box-->
-        <div class="row">
-          <!--Sidebar left-->
-          <div class="col" id="sidebar"></div>
-          <div class="col form-group inputbox">
-            <input id="description 1" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-            <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
+      <!--Box-->
+      <div class="row">
+        <!--Sidebar left-->
+        <div class="col" id="sidebar"></div>
+        <div class="col form-group inputbox">
+          <input id="description 1" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
+          <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
               oninput="calculateSum()">
-          </div>
-          <div class="col inputbox" id="deletebutton" onclick="removeBox()">
-            <img src="../ressources/img/Icons/minusIcon.png" width="100%">
-          </div>
-          <!--Sidebar right-->
-          <div class="col" id="sidebar"></div>
         </div>
+        <div class="col inputbox" id="deletebutton" >
+          <img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()" >
+        </div>
+        <!--Sidebar right-->
+        <div class="col" id="sidebar"></div>
       </div>
+    </div>
    
     <br>
     <div class="row">
