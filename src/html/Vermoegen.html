@@ -56,9 +56,10 @@
         <!--Sidebar left-->
         <div class="col" id="sidebar"></div>
         <div class="col form-group inputbox">
-          <input id="description 1" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">
-          <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
-            oninput="calculateSum()">
+          <input id="description 1" type="text" class="form-control textfield description" placeholder="Beschreibung"
+            value="">
+          <input id="amount 1" type="number" name="point" class="form-control  textfield amount" step="1" placeholder="Betrag"
+            value="" min="0" oninput="calculateSum()">
         </div>
         <div class="col inputbox" id="deletebutton">
           <img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">

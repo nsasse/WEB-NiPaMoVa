@@ -17,8 +17,10 @@ function calculateSum() {
 }
 
 function removeBox() {
-    let boxReset = "";
-    document.getElementById("inputbox").innerHTML = boxReset;
+    document.getElementById("boxes").onclick = function () {
+        this.innerHTML = null;
+        this.remove();
+    }
 }
 
 function addBox() {
@@ -30,7 +32,8 @@ function addBox() {
     input.id = 'box' + boxCounter;
     document.getElementById('area').appendChild(input);
 
-    let box = '<div class="row">' +
+    let box = '<div id="boxes">' +
+        '<div class="row">' +
         '<div class="col" id="sidebar"></div>' +
         '<div class="col form-group inputbox">' +
         '<input id="description" type="text" class="form-control textfield" placeholder="Beschreibung" value="">' +
@@ -42,7 +45,8 @@ function addBox() {
         '<div class="col" id="sidebar"></div>' +
         '</div>' +
         '<div id="boxes"></div>' +
-        '</div>';
+        '</div>' +
+        '</div>'
 
     document.getElementById('box' + boxCounter).innerHTML = box;
 }
@@ -70,5 +74,5 @@ function submit() {
     }
     else {
         self.location.href = "../html/Verbindlichkeiten.html";
-    }  
+    }
 }
