@@ -15,22 +15,32 @@
 
 .inputbox{
     background-color: #F2F2F2;
-    padding: 2%;
+     /*wird nicht mehr benötigt*/
 }
 
 .addbox{
-    max-height: 100%;
+    background-color: #F2F2F2;
+    padding: 2%;
 }
 
 .textfield{
+    margin-top: 1%;
     margin-bottom: 1%;
 }
 
 #deletebutton{
     padding: 0.25%;
-    max-width: 2.5%;
+    /*max-width: 3%;*/
+    padding-right: 0.5%;
+}
+
+.rowBottomMargin{
     margin-bottom: 2%;
-    /* Höhe der Box fehlerhaft*/
+}
+
+.colBox{
+    background-color: #F2F2F2;
+    padding: 1%;
 }
 
 /*in PersoenlicheDaten.html style für select dings*/

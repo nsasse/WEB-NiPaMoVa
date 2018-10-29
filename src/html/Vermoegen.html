@@ -15,13 +15,13 @@
   <!--Header-->
   <nav class="navbar navbar-expand-lg zHeader">
     <a class="navbar-brand" href="#">
-        <a href="../index.html"><img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo"></a>
+      <a href="../index.html"><img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo"></a>
     </a>
     <h5 class="headerTitle">Testamenterstellung</h5>
   </nav>
 
   <main>
-    <div class="container" id=main>
+    <div class="container">
       <!--statusbar-->
       <div class="row text-center">
         <div class="col statusbarInactiv border">
@@ -51,16 +51,16 @@
       <!--Area for Bootstrap / Table-->
       <div id=area>
         <!--Box-->
-        <div class="row">
+        <div class="row rowBottomMargin">
           <!--Sidebar left-->
           <div class="col-2"></div>
-          <div class="col form-group inputbox">
+          <div class="col-7 colBox">
             <input id="description 1" type="text" class="form-control textfield description" placeholder="Beschreibung"
               value="">
-            <input id="amount 1" type="number" name="point" class="form-control  textfield amount" step="1" placeholder="Betrag"
+            <input id="amount 1" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag"
               value="" min="0" oninput="calculateSum()">
           </div>
-          <div class="col inputbox" id="deletebutton">
+          <div class="col-1 colBox" id="deletebutton">
             <img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">
           </div>
           <!--Sidebar right-->
@@ -69,7 +69,7 @@
       </div>
       <div class="row">
         <div class="col-2"></div>
-        <div class="col-8 inputbox text-center addbox" onclick="addBox()">
+        <div class="col-8 text-center addbox" onclick="addBox()">
           <img src="../ressources/img/Icons/plusIcon.png" height="23vh">Hinzufügen
         </div>
         <div class="col-2"></div>
