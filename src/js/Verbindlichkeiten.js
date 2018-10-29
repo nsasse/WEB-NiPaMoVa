@@ -1,7 +1,7 @@
 
 let boxList = document.getElementsByClassName('amount');
-let boxCounter=1;
-let boxReader= document.getElementById('area');
+let boxCounter = 1;
+let boxReader = document.getElementById('area');
 
 function calculateSum() {
 
@@ -18,7 +18,7 @@ function calculateSum() {
 
 
 
-function addBox() { 
+function addBox() {
     boxCounter++;
 
     let input = document.createElement('div');
@@ -26,34 +26,36 @@ function addBox() {
     input.id = 'box' + boxCounter;
     boxReader.appendChild(input);
 
-    
 
-    let box = '<div id="boxes"> ' + '<div class="row">' +
+
+    let box = '<div id="box"> ' + '<div class="row">' +
         '<div class="col" id="sidebar"></div>' +
         '<div class="col form-group inputbox">' +
         '<input id="description" type="text" class="form-control textfield" placeholder="Beschreibung" value="">' +
         '<input id="amount" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0" oninput="calculateSum()" >' +
         '</div>' +
         '<div class="col inputbox" id="deletebutton">' +
-        '<img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox(this.childNodes.id)">' +
+        '<img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">' +
         '</div>' +
         '<div class="col" id="sidebar"></div>' +
         '</div>' +
-        '</div>' + '</div>';
+        '</div>';
 
-    
+
 
     input.innerHTML = box;
 
 }
 
-function removeBox(){
+function removeBox() {
 
-    document.getElementById("boxes").onclick=function(){
-            this.innerHTML=null;
-            this.remove();  
-        
+    document.getElementById('area').onclick = function (event) {
+       /*bisher wird nur das img gelöscht!*/
+        var elem = event.target;
+    
+        var parent = elem.parentNode;
+        parent.removeChild(elem);
     }
 
-    
+
 }
