@@ -1,5 +1,6 @@
 let jaButton = document.getElementById("ja");
 let neinButton = document.getElementById("nein");
+let anzahl; //new
 
 let ehegatt = document.getElementById("namedesehegattin");
 
@@ -24,15 +25,12 @@ let kind = document.getElementById("anzahlderkinder");
 kinder();
 
 function kinder() {
-
     if (ja2Button.checked) {
         kind.style.display = "block";
     }
-
     else {
         kind.style.display = "none";
-    }
-
+    } 
 }
 
 function addFields() {
@@ -42,7 +40,7 @@ function addFields() {
 
     container.innerHTML = "";
     for (i = 1; i <= anzahl; i++) {
-        container.innerHTML += '<input id="namedesKindes" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">';
+        container.innerHTML += '<input id="namedesKindes' + anzahl + '" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">'; //new
     }
 }
 
@@ -86,7 +84,12 @@ console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der √úberpr√
         sessionStorage.titel = titel;
 
         if(ehegattja) {
-            
+            sessionStorage.ehePartner = namedesehegattin;
+        }
+
+        for (i = 1; i <= anzahl; i++) {
+            let helper = "kind" + anzahl
+            sessionStorage.setItem(helper, "namedesKindes" + anzahl);
         }
 
 
