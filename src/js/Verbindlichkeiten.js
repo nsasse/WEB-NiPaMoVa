@@ -28,13 +28,13 @@ function addBox() {
 
 
 
-    let box = '<div id="box"> ' + '<div class="row">' +
+    let box = '<div id="box' + boxCounter + '"> ' + '<div class="row">' +
         '<div class="col" id="sidebar"></div>' +
         '<div class="col form-group inputbox">' +
         '<input id="description" type="text" class="form-control textfield" placeholder="Beschreibung" value="">' +
         '<input id="amount" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0" oninput="calculateSum()" >' +
         '</div>' +
-        '<div class="col inputbox" id="deletebutton">' +
+        '<div class="col inputbox" id="deletebutton' + boxCounter +' "> ' +
         '<img src="../ressources/img/Icons/minusIcon.png" width="100%" onclick="removeBox()">' +
         '</div>' +
         '<div class="col" id="sidebar"></div>' +
@@ -51,10 +51,17 @@ function removeBox() {
 
     document.getElementById('area').onclick = function (event) {
        /*bisher wird nur das img gelöscht!*/
-        var elem = event.target;
-    
-        var parent = elem.parentNode;
-        parent.removeChild(elem);
+        var elem = event.target.id;
+        var num=1;
+        for(var i=0; i<=document.getElementsByClassName('form-group').length; i++){
+            if(elem==document.getElementById('deletebutton'+i)){
+                num=i;
+            }
+        }
+        var del= document.getElementById('box'+num);
+
+        var parent =del.parentNode;
+        parent.removeChild(del);
     }
 
 
