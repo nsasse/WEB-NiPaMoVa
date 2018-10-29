@@ -1,4 +1,3 @@
-
 .statusbarActiv{
     /* Style der Statusbar bei aktiver Seite*/
     background-color: #4f83cc;
@@ -28,6 +27,13 @@
     margin-bottom: 1%;
 }
 
+#bootstrap-overrides .deleteButton{
+    padding: 0.25%;
+    max-width: 2.5%;
+    margin-bottom: 2%;
+    /* Höhe der Box fehlerhaft*/
+}
+
 #deletebutton{
     padding: 0.25%;
     /*max-width: 3%;*/
@@ -43,7 +49,7 @@
     padding: 1%;
 }
 
-/*in PersoenlicheDaten.html style für select dings*/
+/in PersoenlicheDaten.html style für select dings/
 .centerBlock { 
     display:table-row;
     width:auto;
