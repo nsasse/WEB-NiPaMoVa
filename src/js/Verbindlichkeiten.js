@@ -50,6 +50,7 @@ function addBox() {
 function removeBox() {
 
     document.getElementById('area').onclick = function (event) {
+       /*bisher wird nur das img gelöscht!*/
         var elem = event.target;
     
         var parent = elem.parentNode;
