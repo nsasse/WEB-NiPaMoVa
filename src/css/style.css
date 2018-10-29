@@ -99,17 +99,6 @@ html, body{
     text-align: right;
 }
 
-.xfooter{
-    position: sticky;
-    margin: 0px;
-    bottom: 0px;;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #002f6c;
-    text-align:right;
-}
-
 .zFooter {
     margin: 0px;
     bottom: 0px;;
