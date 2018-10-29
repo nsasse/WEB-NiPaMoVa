@@ -47,6 +47,7 @@ function removeBox() {
     let boxToDel = document.getElementById('box' + event.target.id);
     let parent = boxToDel.parentNode;
     parent.removeChild(boxToDel);
+    calculateSum();
 }
 
 function ueberpruefung() {
