@@ -17,10 +17,7 @@ function calculateSum() {
 }
 
 function removeBox() {
-    document.getElementById("boxes").onclick = function () {
-        this.innerHTML = null;
-        this.remove();
-    }
+    //Boxen entfernen
 }
 
 function addBox() {
