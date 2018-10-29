@@ -1,5 +1,5 @@
 let Testament = class {
-    constructor(anrede, firstName, lastName,birthdate, email, personen, vermoegen, verbindlichkeiten, titel) {
+    constructor(anrede, firstName, lastName, birthdate, email, personen, vermoegen, verbindlichkeiten, titel) {
         this.anrede = anrede;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -10,9 +10,9 @@ let Testament = class {
         this.verbindlichkeiten = verbindlichkeiten;
         this.titel = titel;
     }
-
-
 }
+
+console.log(firebase);
 
 let Person = class {
     constructor(typ, name) {
@@ -79,8 +79,8 @@ let personen = [
 ]
 
 
-let testament = new Testament('Herr', sessionStorage.vorname, 'Mayer','22.12.1999', 
-            'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
+let testament = new Testament('Herr', sessionStorage.vorname, 'Mayer', '22.12.1999',
+    'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
 
 function loadTestamentData() {
     //Persönliche Daten
