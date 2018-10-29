@@ -50,17 +50,20 @@
       </div>
       <div id=area>
         <!--Box-->
-        <div class="row rowBottomMargin">
+        <div class="row rowBottomMargin box1">
           <!--Sidebar left-->
           <div class="col-2"></div>
           <div class="col-7 colBox">
-            <input id="description 1" type="text" class="form-control textfield description" placeholder="Beschreibung"
+            <input id="description1" type="text" class="form-control textfield description" placeholder="Beschreibung"
               value="">
-            <input id="amount 1" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag"
+            <input id="amount1" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag"
               value="" min="0" oninput="calculateSum()">
           </div>
           <div class="col-1 colBox text-right" id="deletebutton">
-            <img src="../ressources/img/Icons/minusIcon.png" height="30vh" onclick="removeBox()">
+            <!--
+              <img src="../ressources/img/Icons/minusIcon.png" id="1" height="30vh" onclick="removeBox()">
+            Entfernen funktioniert nicht
+            -->
           </div>
           <!--Sidebar right-->
           <div class="col-2"></div>

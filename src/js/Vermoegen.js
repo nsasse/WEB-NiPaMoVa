@@ -17,29 +17,32 @@ function calculateSum() {
 }
 
 function removeBox() {
-    //Boxen entfernen ergänzen
+    if (event.target.id == "") {
+        return;
+    }
+
+    let boxToDel = document.getElementById('box' + event.target.id);
+    let parent = boxToDel.parentNode;
+    parent.removeChild(boxToDel);
+    calculateSum();
 }
 
 function addBox() {
-    /*ID vergabe muss noch ergänzt werden*/
     boxCounter++;
 
     let input = document.createElement('div');
     input.class = 'row';
     input.id = 'box' + boxCounter;
     document.getElementById('area').appendChild(input);
-    //Dynamische Veriable hinzufügen
-    let box = '<div class="row rowBottomMargin">' +
-    '<!--Sidebar left-->' +
+    let box = '<div class="row rowBottomMargin" id="box' +boxCounter + '">' +
     '<div class="col-2"></div>' +
     '<div class="col-7 colBox">' +
-    '<input id="description ' +boxCounter + '" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">' +
-    '<input id="amount ' +boxCounter + '" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag" value="" min="0" oninput="calculateSum()">' +
+    '<input id="description' +boxCounter + '" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">' +
+    '<input id="amount' +boxCounter + '" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag" value="" min="0" oninput="calculateSum()">' +
     '</div>' +
     '<div class="col-1 colBox text-right" id="deletebutton">' +
-    '<img src="../ressources/img/Icons/minusIcon.png" height="30vh" onclick="removeBox()">' +
+    '<img src="../ressources/img/Icons/minusIcon.png" id="' +boxCounter +'" height="30vh" onclick="removeBox()">' +
     '</div>' +
-    '<!--Sidebar right-->' +
     '<div class="col-2"></div>' +
     '</div>'
 
