@@ -67,8 +67,8 @@
  }
 
  #selecttitel {
-    margin-left: 0px !important;
-    display: table-row !important;
+    margin-left: 0px;
+    display: table-row;
     margin-right: auto;
     width:auto;
     align-content: left; 

@@ -1,6 +1,5 @@
 let jaButton = document.getElementById("ja");
 let neinButton = document.getElementById("nein");
-let anzahl; //new
 
 let ehegatt = document.getElementById("namedesehegattin");
 
@@ -30,7 +29,7 @@ function kinder() {
     }
     else {
         kind.style.display = "none";
-    } 
+    }
 }
 
 function addFields() {
@@ -40,7 +39,7 @@ function addFields() {
 
     container.innerHTML = "";
     for (i = 1; i <= anzahl; i++) {
-        container.innerHTML += '<input id="namedesKindes' + anzahl + '" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">'; //new
+        container.innerHTML += '<input id="nameDesKindes' + i+ '" type="text" class="form-control textfield namedesKindes" placeholder="Name des Kindes" value="">'; //new
     }
 }
 
@@ -55,26 +54,26 @@ function nullFields() {
 
 function ueberpruefung() {
 
-let vorname1 = document.getElementById("vorname").value;
-let nachname1 = document.getElementById("nachname").value;
-let geburtstag1 = document.getElementById("geburtsdatum").value;
-let email1 = document.getElementById("e-mail").value;
-let anrede = document.getElementById("anrede").value;
-let titel = document.getElementById("titel").value;
-let ehegattja = document.getElementById("ja").checked;
-let ehegattnein = document.getElementById("nein").checked; 
-let kinderja = document.getElementById("ja2").checked;
-let kindernein = document.getElementById("nein2").checked;
-let namedesehegattin = document.getElementById("namedesehegattin").value;
-let kinderzahl = document.getElementById("anzahlderkinder").value;
+    let vorname1 = document.getElementById("vorname").value;
+    let nachname1 = document.getElementById("nachname").value;
+    let geburtstag1 = document.getElementById("geburtsdatum").value;
+    let email1 = document.getElementById("e-mail").value;
+    let anrede = document.getElementById("anrede").value;
+    let titel = document.getElementById("titel").value;
+    let ehegattja = document.getElementById("ja").checked;
+    let ehegattnein = document.getElementById("nein").checked;
+    let kinderja = document.getElementById("ja2").checked;
+    let kindernein = document.getElementById("nein2").checked;
+    let namedesehegattin = document.getElementById("namedesehegattin").value;
+    let kinderzahl = document.getElementById("anzahlderkinder").value;
 
-console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überprüfung */
-    if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == "" 
-    || (!ehegattja && !ehegattnein) || (!kinderja && !kindernein) || anrede == "" ||  titel == "" 
-    || (namedesehegattin == "" && ehegattja) || !kindernamepruefung() || (kinderja && kinderzahl == "")) {
+    console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überprüfung */
+    if (vorname1 == "" || nachname1 == "" || geburtstag1 == "" || email1 == ""
+        || (!ehegattja && !ehegattnein) || (!kinderja && !kindernein) || anrede == "" || titel == ""
+        || (namedesehegattin == "" && ehegattja) || !kindernamepruefung() || (kinderja && kinderzahl == "")) {
 
-    window.alert("Bitte überprüfen Sie Ihre Eingaben!" );  
-}
+        window.alert("Bitte überprüfen Sie Ihre Eingaben!");
+    }
     else {
         sessionStorage.vorname = vorname1;
         sessionStorage.nachname = nachname1;
@@ -83,13 +82,13 @@ console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überpr�
         sessionStorage.anrede = anrede;
         sessionStorage.titel = titel;
 
-        if(ehegattja) {
+        if (ehegattja) {
             sessionStorage.ehePartner = namedesehegattin;
         }
 
-        for (i = 1; i <= anzahl; i++) {
-            let helper = "kind" + anzahl
-            sessionStorage.setItem(helper, "namedesKindes" + anzahl);
+        for (i = 1; i <= kinderzahl; i++) {
+            let helper = "kind" + kinderzahl
+            sessionStorage.setItem(helper, document.getElementById("nameDesKindes" + kinderzahl));
         }
 
 
@@ -98,13 +97,18 @@ console.log(vorname1 + nachname1 + geburtstag1 + email1); /* diehnt der Überpr�
 }
 
 function kindernamepruefung() {
-    let kindername = document.getElementsByClassName("namedesKindes");
-    let ausgefuellt = true;
-    for (var i = 0; i < kindername.length; i++) {
-        if(kindername[i].value == "") {
-        ausgefuellt = false;
-    }
-      }
-    return ausgefuellt;
 
+    let kinderzahl = document.getElementById("anzahlderkinder").value;
+    let ausgefuellt = true;
+
+    console.log(kinderzahl);
+
+    for (i = 1; i <= kinderzahl; i++) {
+        let kindername = document.getElementById("nameDesKindes" + i);
+        if (kindername.value == "") {
+            ausgefuellt = false;
+        }
+    }
+
+    return ausgefuellt;
 }
