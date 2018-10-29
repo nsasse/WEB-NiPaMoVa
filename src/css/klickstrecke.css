@@ -50,21 +50,18 @@
  .styled-select select {
     background: transparent;
     border: none;
-    font-size: 115.5%;
-    height: 239.25%;
-    padding: 41.25%; /* If you add too much padding here, the options won't show in IE */
-    width: 2211%;
+    padding: 3%; /* If you add too much padding here, the options won't show in IE */
  }
  
  .styled-select.slate {
     background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
-    height: 25%;
+    height: 100%;
     width: 100%;
  }
  
  .styled-select.slate select {
     border: 1px solid #ccc;
-    font-size: 100%;
+    font-size: 60%;
     height: 100%;
     width: 268px;
  }
