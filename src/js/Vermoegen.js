@@ -28,12 +28,12 @@ function addBox() {
     input.class = 'row';
     input.id = 'box' + boxCounter;
     document.getElementById('area').appendChild(input);
-
+    //Dynamische Veriable hinzufügen
     let box = '<div id="boxes">' +
         '<div class="row">' +
         '<div class="col" id="sidebar"></div>' +
         '<div class="col form-group inputbox">' +
-        '<input id="description" type="text" class="form-control textfield" placeholder="Beschreibung" value="">' +
+        '<input id="description" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">' +
         '<input id="amount" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0" oninput="calculateSum()">' +
         '</div>' +
         '<div class="col inputbox" id="deletebutton">' +
