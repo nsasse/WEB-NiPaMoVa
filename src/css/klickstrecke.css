@@ -90,6 +90,13 @@
     align-content: left; 
 }
 
-  .habensiekinder {
+.habensiekinder {
     margin-right: 2%;
 }
+      
+#bootstrap-overrides .inputkind {
+    display: inline;
+    width: 50px;
+}
+
+    

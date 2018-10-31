@@ -32,8 +32,12 @@
         </a>
       </div>
       <div class="col statusbarActiv border">
-        <a href="Verbindlichkeiten.html">
           <h4>Verbindlichkeiten</h4>
+        </a>
+      </div>
+      <div class="col statusbarInactiv border">
+        <a href="Verteilung.html">
+          <h4>Verteilung</h4>
         </a>
       </div>
     </div>
@@ -48,12 +52,12 @@
     </div>
     <div id="area">
       <!--Box-->
-      <div class="row" id="box1">
+      <div class="row" id="box">
         <!--Sidebar left-->
         <div class="col-2"></div>
         <div class="col form-group inputbox">
-          <input id="description 1" type="text" class="form-control textfield" placeholder="Beschreibung" value="">
-          <input id="amount 1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
+          <input id="description1" name="description" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">
+          <input id="amount1" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0"
             oninput="calculateSum()">
         </div>
         <div class="col inputbox deleteButton">
@@ -85,7 +89,7 @@
     <div class="row">
       <div class="col-10"></div>
       <div class="col-2" style="padding: 2.3%">
-        <button type="button" class="btn btn-mipamova" onclick="location.href ='Zusammenfassung.html';">
+        <button type="button" class="btn btn-mipamova" onclick="ueberpruefung()">
           Weiter
         </button>      
       </div>
