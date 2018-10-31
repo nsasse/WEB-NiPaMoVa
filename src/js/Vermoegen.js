@@ -71,6 +71,15 @@ function submit() {
         window.alert("Bitte überprüfen Sie Ihre Eingaben!");
     }
     else {
-        self.location.href = "../html/Verbindlichkeiten.html";
+        sessionStorage.vermoegenAnzahl = boxCounter;
+
+        for (index = 1; index < boxCounter+1; index++) {
+            let helper1 = "vermoegenDescription" + index;
+            let helper2 = "vermoegenAmount" + index;
+            sessionStorage.setItem(helper1, document.getElementById("description" + index).value);
+            sessionStorage.setItem(helper2, document.getElementById("amount" + index).value);
+        }
+
+        //self.location.href = "../html/Verbindlichkeiten.html";
     }
 }
