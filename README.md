@@ -2,7 +2,8 @@
 Nico, Patrick, Monika, Vanessa
 
 TO-DO:
-Media Queries erstellen
+(- Media Queries erstellen)
+- Verlinkung aus Statusbar entfernen
 
 
 Farbcodes:
