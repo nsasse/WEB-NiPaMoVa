@@ -87,8 +87,8 @@ function ueberpruefung() {
         }
 
         for (i = 1; i <= kinderzahl; i++) {
-            let helper = "kind" + kinderzahl
-            sessionStorage.setItem(helper, document.getElementById("nameDesKindes" + kinderzahl));
+            let helper = "kind" + i;
+            sessionStorage.setItem(helper, document.getElementById("nameDesKindes" + i).value);
         }
 
 
