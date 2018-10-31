@@ -21,6 +21,8 @@ function ueberpruefung1() {
         sessionStorage.hausnummerrechnung = hausnummer2;
         sessionStorage.plzrechnung = plz2;
 
-        self.location.href = "../html/Vermoegen.html";  /* Link noch ändern */ 
+
+        window.alert("Danke für Ihre Bestellung!");
+        self.location.href = "../index.html";  
     }
 }
