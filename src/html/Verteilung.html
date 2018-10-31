@@ -55,44 +55,57 @@
       </div>
       <!--Individuell-->
       <div class="side-by-side">
-        <h3> Die gesetzliche Verteilung besagt, dass 50% an den Ehegatten gehen und die restlichen 50% werden zu gleichen Teilen auf die Kinder aufgeteilt.</p>
-        <h6>Möchten Sie das Erbe gesetzlich verteilen lassen?</h3>
+        <h3> Die gesetzliche Verteilung besagt, dass 50% an den Ehegatten gehen und die restlichen 50% werden zu
+          gleichen Teilen auf die Kinder aufgeteilt.</p>
+          <h6>Möchten Sie das Erbe gesetzlich verteilen lassen?
+        </h3>
         Ja
-        <input type="radio" onclick="verteilen ()" id="ja" name="verteilen">
+        <input type="radio" onclick="verteilen ()" id="jav" name="verteilen">
         Nein
-        <input type="radio" onclick="indivVerteilen ()" id="nein" name="verteilen">
-      </div>
-
-      <!--Ehegatte-->
-      <div class="col-1"></div>
-      <div class="col-11 side-by-side">
-        <h6>Soll Ihr Ehegatte --NAME-- etwas von Ihrem Erbe erhalten?</h6>
-        Ja
-        <input type="radio" onclick="eheverteilen ()" id="ja" name="eheverteilen">
-        Nein
-        <input type="radio" onclick="eheverteilen ()" id="nein" name="eheverteilen">
-        <br>
-        <br>
-        <form>
-            <label for="kind">Name Ehegatte:  <input class="form-control inputkind" type="text" name="kindverteilen" />% </label><br />
-          </form>
+        <input type="radio" onclick="verteilen ()" id="neinv" name="verteilen">
       </div>
       <br>
-      <!--Kind-->
-      <div class="col-1"></div>
-      <div class="col-11 side-by-side">
-        <h6>Soll(en) Ihr(e) Kind(er) etwas von Ihrem Erbe erhalten?</h6>
-        Ja
-        <input type="radio" onclick="kindverteilen ()" id="ja" name="kindverteilen">
-        Nein
-        <input type="radio" onclick="kindverteilen ()" id="nein" name="kindverteilen">
+      <div id="indivVert">
+        <!--Ehegatte-->
+        <div class="col-1"></div>
+        <div class="col-11 side-by-side">
+          <h6>Soll Ihr Ehegatte --NAME-- etwas von Ihrem Erbe erhalten?</h6>
+          Ja
+          <input type="radio" onclick="eheverteilen ()" id="ja" name="eheverteilen">
+          Nein
+          <input type="radio" onclick="eheverteilen ()" id="nein" name="eheverteilen">
           <br>
           <br>
-        <form>
-            <label for="kind">Name Kind:  <input class="form-control inputkind" type="text" name="kindverteilen" />% </label><br />
-          </form>
-        
+          <form>
+            <label id="eheg">Name Ehegatte: <input class="form-control inputkind" type="text" name="kindverteilen" />%
+            </label><br />
+            <div id="platzehe">
 
+
+            </div>
+          </form>
+        </div>
+        <br>
+        <!--Kind-->
+        <div class="col-1"></div>
+        <div class="col-11">
+          <div class="side-by-side">
+            <h6>Soll(en) Ihr(e) Kind(er) etwas von Ihrem Erbe erhalten?</h6>
+            Ja
+            <input type="radio" onclick="kindverteilen ()" id="ja2" name="kindverteilen">
+            Nein
+            <input type="radio" onclick="kindverteilen ()" id="nein2" name="kindverteilen">
+            <br>
+            <br>
+          </div>
+          <form>
+            <label id="kind" onchange="addFields()" onclick="addFields()">Name Kind: <input class="form-control inputkind"
+                type="text" name="kindverteilen" />% </label>
+            <div id="platzkinder">
+
+            </div>
+          </form>
+        </div>
       </div>
       <!--weiterButton-->
       <div class="row">
