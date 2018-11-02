@@ -60,6 +60,7 @@ function ueberpruefung() {
             if (isNaN(amountValue)) {
                 window.alert("Bitte füllen Sie jeden Betrag aus!");
                 forwarding= false;
+                break;
             }
         }
     
@@ -69,6 +70,7 @@ function ueberpruefung() {
             if (descValue==null) {
                 window.alert("Bitte füllen Sie alle Beschreibungen aus!");
                 forwarding=false;
+                return;
             }
         }
         if(forwarding){
@@ -81,7 +83,7 @@ function ueberpruefung() {
                 sessionStorage.setItem(helper2, document.getElementById("amount" + index).value);
             }
     
-            //self.location.href = "../html/Verteilung.html";
+            self.location.href = "../html/Verteilung.html";
         }
     }
     
