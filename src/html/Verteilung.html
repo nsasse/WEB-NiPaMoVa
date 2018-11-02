@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="../css/klickstrecke.css" media="screen" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
-  <title>NiPaMoVa - Vermögen</title>
+  <title>NiPaMoVa - Verteilung</title>
 </head>
 
 <body id="bootstrap-overrides">
@@ -69,16 +69,13 @@
         <!--Ehegatte-->
         <div class="col-1"></div>
         <div class="col-11 side-by-side">
-          <h6>Soll Ihr Ehegatte --NAME-- etwas von Ihrem Erbe erhalten?</h6>
+          <h6>Soll Ihr Ehepartner etwas von Ihrem Erbe erhalten?</h6>
           Ja
           <input type="radio" onclick="eheverteilen ()" id="ja" name="eheverteilen">
           Nein
           <input type="radio" onclick="eheverteilen ()" id="nein" name="eheverteilen">
           <br>
-          <br>
-          <form>
-            <label id="eheg">Name Ehegatte: <input class="form-control inputkind" type="text" name="kindverteilen" />%
-            </label><br />
+          <br>            
             <div id="platzehe">
 
 
@@ -99,12 +96,14 @@
             <br>
           </div>
           <form>
-            <label id="kind" onchange="addFields()" onclick="addFields()">Name Kind: <input class="form-control inputkind"
-                type="text" name="kindverteilen" />% </label>
             <div id="platzkinder">
 
             </div>
           </form>
+          <h6>Zu verteilen sind 100% ---- ></h6>
+          <h6>Bisher verteilt: </h6>
+          <b><h6 id="result">0</h6></b>
+          <h6>%</h6>
         </div>
       </div>
       <!--weiterButton-->
