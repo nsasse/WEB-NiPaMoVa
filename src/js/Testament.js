@@ -1,5 +1,5 @@
 let Testament = class {
-    constructor(anrede, firstName, lastName, birthdate, email, personen, vermoegen, verbindlichkeiten, titel) {
+    constructor(anrede, firstName, lastName, birthdate, email, personen, vermoegen, verbindlichkeiten, titel, anteile) {
         this.anrede = anrede;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -9,10 +9,9 @@ let Testament = class {
         this.vermoegen = vermoegen;
         this.verbindlichkeiten = verbindlichkeiten;
         this.titel = titel;
+        this.anteile = anteile;
     }
 }
-
-console.log(firebase);
 
 let Person = class {
     constructor(typ, name) {
@@ -29,11 +28,18 @@ let Person = class {
 
         let html =
             '<div class="row">' +
-            '<div class="col-1" id="typ">' + this.typ + ':</div>' +
+            '<div class="col-2" id="typ">' + this.typ + ':</div>' +
             '<div class="col-6" id="name">' + this.name + '</div>' +
             '</div>';
 
         document.getElementById(area + 'row' + count).innerHTML = html;
+    }
+}
+
+let Anteil = class {
+    constructor(desc, amount) {
+        this.desc = desc;
+        this.amount = amount;
     }
 }
 
@@ -62,27 +68,69 @@ let Wertinformation = class {
 
 }
 
-let vermoegen = [
-    new Wertinformation('Geld', 2323),
-    new Wertinformation('Sachwerte', 22325)
-]
+let personen = []
+let vermoegen = []
+let verbindlichkeiten = []
+let anteile = []
 
-let verbindlichkeiten = [
-    new Wertinformation('Schulden Peter', 232),
-    new Wertinformation('Schulden Klaus', 2423)
-]
+function loadArrayData() {
+    //Personen
+    let ehePartner = sessionStorage.ehePartner;
+    if (ehePartner != null) {
+        personen.push(new Person('Ehepartner', ehePartner))
+    }
+    for (i = 1; i <= 100; i++) {
+        let kind = sessionStorage.getItem("kind" + i);
 
-let personen = [
-    new Person('Frau', 'Petra Parker'),
-    new Person('Kind', 'Lustig Lol'),
-    new Person('Kind', 'Paddi Waddi')
-]
+        if (kind == null) {
+            break;
+        }
+        personen.push(new Person('Kind', kind));
+    };
 
+    //Vermögen
+    for (i = 1; i <= sessionStorage.vermoegenAnzahl; i++) {
+        let vermoegenDesc = sessionStorage.getItem("vermoegenDescription" + i);
+        let vermoegenAmount = sessionStorage.getItem("vermoegenAmount" + i);
 
-let testament = new Testament('Herr', sessionStorage.vorname, 'Mayer', '22.12.1999',
-    'Peter.Mayer@gmx.de', personen, vermoegen, verbindlichkeiten);
+        vermoegen.push(new Wertinformation(vermoegenDesc, vermoegenAmount));
+    };
+
+    //Verbindlichkeiten
+    for (i = 1; i <= 100; i++) {
+        let verbDesc = sessionStorage.getItem("verbindlichkeitDescription" + i);
+        let verbAmount = sessionStorage.getItem("verbindlichkeitAmount" + i);
+
+        if (verbDesc == null) {
+            break;
+        }
+        verbindlichkeiten.push(new Wertinformation(verbDesc, verbAmount));
+    };
+
+    //Anteile
+    let anteil = sessionStorage.AnteilEhePartner;
+    if (anteil != null) {
+        anteile.push(new Anteil('Anteil des Ehepartners', anteil))
+    }
+    for (i = 0; i <= 100; i++) {
+        let kindAnteil = sessionStorage.getItem("AnteilKind" + i);
+        let kindName = sessionStorage.getItem("kind" + (i+1));
+
+        if (kindAnteil == null) {
+            break;
+        }
+
+        anteile.push(new Anteil(kindName, kindAnteil));
+    };
+
+}
+
+let testament = new Testament(sessionStorage.anrede, sessionStorage.vorname, sessionStorage.nachname, sessionStorage.geburtstag,
+    sessionStorage.email, personen, vermoegen, verbindlichkeiten, sessionStorage.titel,anteile);
 
 function loadTestamentData() {
+    loadArrayData();
+
     //Persönliche Daten
     document.getElementById("anrede").innerHTML = testament.anrede;
     if (testament.titel != undefined) {
@@ -109,7 +157,15 @@ function loadTestamentData() {
         currentValue.printDescription("verbindlichkeiten", index + 1);
     });
 
+}
 
+function writeTestament(testament) {
+    firebase.database().ref('testamente/' + Math.floor((Math.random() * 10000) + 1)).set(testament);
+}
 
-    console.log("loaded");
+function nextSite() {
+    console.log(testament);
+    writeTestament(testament);
+
+    self.location.href = "../html/Abschluss.html";
 }

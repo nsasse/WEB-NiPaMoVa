@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/start.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/uebersicht.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/zusammenfassung.css" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <title>NiPaMoVa - Zusammenfassung</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBZNpIMTXlq7MG7PpXcU05NKy2-srkX8Lc",
+            authDomain: "nipamova.firebaseapp.com",
+            databaseURL: "https://nipamova.firebaseio.com",
+            projectId: "nipamova",
+            storageBucket: "nipamova.appspot.com",
+            messagingSenderId: "99488612074"
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+    </script>
+</head>
+
+<body id="bootstrap-overrides" onload="loadTestaments();">
+    <nav class="navbar navbar-expand-lg zHeader">
+        <a class="navbar-brand" href="#">
+            <img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo">
+        </a>
+        <h5 class="headerTitle">Übersicht</h5>
+    </nav>
+    <!--Datenanzeige-->
+    <div class="bg">
+        <div class="container">
+            <div class="row testamentTable">
+                <div class="col-11 topMargin">
+                    <h2>Übersicht über die erstellten Testamente:</h2>
+                </div>
+            </div>
+            <div class="row testamentTable">
+                <div class="col-1">
+                    <h3>Suche</h3>
+                </div>
+                <div class="col-2">
+                    <input id="vorname" type="text" class="form-control textfield" placeholder="Vorname" value="">
+                </div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-mipamova" onclick="search()">
+                        Suchen
+                    </button>
+                </div>
+            </div>
+            <div class="row testamentTable">
+                <div class="col-1">
+                    <h6>Vorname</h6>
+                </div>
+                <div class="col-1">
+                    <h6>Nachname</h6>
+                </div>
+                <div class="col-2">
+                    <h6>Geburtstag</h6>
+                </div>
+                <div class="col-2">
+                    <h6>E-Mail</h6>
+                </div>
+                <div class="col-3">
+                    <h6>Gesamtes Vermögen</h6>
+                </div>
+                <div class="col-3">
+                    <h6>Gesamte Verbindlichkeiten</h6>
+                </div>
+            </div>
+            <hr>
+            <div class="row testamentTable">
+                <div class="col" id="table" style="background-color:white">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="zFooter">
+        <div class="container">
+            <a href="Kontakt.html">
+                <span class="footerLink">Kontakt</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/Testament.js"></script>
+    <script src="../js/Uebersicht.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

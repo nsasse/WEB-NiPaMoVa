@@ -1,0 +1,30 @@
+.testamentTable {
+    padding-left:20px;
+    padding-right:20px;
+}
+
+#bootstrap-overrides hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+    border-style: solid none;
+    border-width: 1px 0;
+    margin: 18px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .testamentRow{
+      padding:5px;
+  }
+
+  #countVermoegen {
+      text-align:center;
+  }
+
+  #countVerbindl {
+      text-align:center;
+  }
