@@ -11,12 +11,11 @@
 </head>
 
 <body id="bootstrap-overrides">
-
     <nav class="navbar navbar-expand-lg zHeader">
-        <a class="navbar-brand" href="#">
-            <a href="../index.html"><img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo"></a>
+        <a class="navbar-brand" href="../index.html">
+            <img src="../ressources/img/MiPaMoVa_Logo.png" class="img-fluid logo">
         </a>
-        <h5 class="headerTitle">Testamenterstellung</h5>
+        <h5 class="headerTitle">Kontakt</h5>
     </nav>
 
     <div class="container">
@@ -34,6 +33,7 @@
             <div class="col-8">
                 <br>
                 <h3> MiPaMoVa GmbH</h3><br>
+                Kundenservice<br>
                 Erzbergstr. 121<br>
                 0815 Karlsruhe<br>
                 0800/XY<br>
@@ -45,22 +45,36 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8 form-group inputbox">
-                <input id="name" type="text" class="form-control textfield" placeholder="Ihr Name" value="">
-                <input id="email" type="email" class="form-control  textfield" placeholder="Ihre E-Mail-Adresse" value="">
+                <select id="salutation">
+                    <option value="">Anrede</option>
+                    <option value="woman">Frau</option>
+                    <option value="man">Herr</option>
+                </select>
+                <input id="name" type="text" class="form-control textfield" placeholder="Name" value="">
+                <input id="firstName" type="text" class="form-control textfield" placeholder="Vorname" value="">
+                <input id="email" type="email" class="form-control  textfield" placeholder="E-Mail-Adresse" value="">
+                <input id="subject" type="text" class="form-control textfield" placeholder="Betreff" value="">
                 <textarea id="message" type="text" class="form-control textfield" rows="5" placeholder="Ihre Nachricht"
                     value=""></textarea>
             </div>
             <div class="col-2"></div>
         </div>
-
         <div class="row">
-            <div class="col-7"></div>
-            <div class="col-3" style="padding: 2.3%">
-                <button type="button" class="btn btn-mipamova" onclick=submit();>Absenden</button>
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h6>In der Regel können wir Ihre Anfrage innerhalb von 3 Werktagen bearbeiten!</h6>
             </div>
             <div class="col-2"></div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-7"></div>
+        <div class="col-3" style="padding: 2.3%">
+            <button type="button" class="btn btn-mipamova" onclick=submit();>Absenden</button>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
 
     <footer class="zFooter">
         <div class="container">
