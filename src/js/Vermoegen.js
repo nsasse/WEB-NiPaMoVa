@@ -9,19 +9,15 @@ function calculateSum() {
     for (let index = 0; amountList.length > index; index++) {
         let amountValue = parseInt(amountList[index].value);
         if (amountValue === "undefined") {
-            //auf undefined prüfen funktioniert nicht
         }
         result = result + amountValue;
     }
     document.getElementById('result').innerHTML = result;
 }
 
-function removeBox() {
-    if (event.target.id == "") {
-        return;
-    }
-
-    let boxToDel = document.getElementById('box' + event.target.id);
+function removeBox(cklicked_id) {
+   
+    let boxToDel = document.getElementById('box' + cklicked_id);
     let parent = boxToDel.parentNode;
     parent.removeChild(boxToDel);
     calculateSum();
@@ -37,11 +33,11 @@ function addBox() {
     let box = '<div class="row rowBottomMargin" id="box' +boxCounter + '">' +
     '<div class="col-2"></div>' +
     '<div class="col-7 colBox">' +
-    '<input id="description' +boxCounter + '" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">' +
+    '<input id="description' +boxCounter +'" type="text" class="form-control textfield description" placeholder="Beschreibung" value="">' +
     '<input id="amount' +boxCounter + '" type="number" name="point" class="form-control textfield amount" step="1" placeholder="Betrag" value="" min="0" oninput="calculateSum()">' +
     '</div>' +
     '<div class="col-1 colBox text-right" id="deletebutton">' +
-    '<img src="../ressources/img/Icons/minusIcon.png" id="' +boxCounter +'" height="30vh" onclick="removeBox()">' +
+    '<img src="../ressources/img/Icons/minusIcon.png" id="' +boxCounter +'" height="30vh" onclick="removeBox(this.id)">' +
     '</div>' +
     '<div class="col-2"></div>' +
     '</div>'
@@ -61,8 +57,7 @@ function submit() {
 
     for (let index = 0; descriptionList > index; index++) {
         let descriptionValue = descriptionList[index].value;
-        //Überprüfung funktioniert nicht
-        if (descriptionValue == "") {
+        if (descriptionValue == "" || descriptionValue == null) {
             forwarding = false;
         }
     }
@@ -73,13 +68,13 @@ function submit() {
     else {
         sessionStorage.vermoegenAnzahl = boxCounter;
 
-        for (index = 1; index < boxCounter+1; index++) {
-            let helper1 = "vermoegenDescription" + index;
-            let helper2 = "vermoegenAmount" + index;
-            sessionStorage.setItem(helper1, document.getElementById("description" + index).value);
-            sessionStorage.setItem(helper2, document.getElementById("amount" + index).value);
+        for (index = 1; index <= boxCounter; index++) {
+            let helper1 = 'vermoegenDescription' + index;
+            let helper2 = 'vermoegenAmount' + index;
+            sessionStorage.setItem(helper1, document.getElementById('description' +index).value);
+            sessionStorage.setItem(helper2, document.getElementById('amount' +index).value);
         }
 
-        //self.location.href = "../html/Verbindlichkeiten.html";
+        self.location.href = "../html/Verbindlichkeiten.html";
     }
 }
