@@ -81,6 +81,7 @@ function ueberpruefung() {
         sessionStorage.email = email1;
         sessionStorage.anrede = anrede;
         sessionStorage.titel = titel;
+        sessionStorage.anzahlderkinder = kinderzahl;
 
         if (ehegattja) {
             sessionStorage.ehePartner = namedesehegattin;
