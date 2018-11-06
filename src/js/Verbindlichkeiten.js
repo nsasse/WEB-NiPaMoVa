@@ -71,7 +71,7 @@ function ueberpruefung() {
         let helper2 = "verbindlichkeitAmount" + i;
         sessionStorage.setItem(helper1, document.getElementById("description" + i).value);
         sessionStorage.setItem(helper2, document.getElementById("amount" + i).value);
-        self.location.href = "../html/Verteilung.html";
+        
     }
-
+    self.location.href = "../html/Verteilung.html";
 }
