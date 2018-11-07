@@ -30,7 +30,7 @@ function addBox() {
         '<input id="amount' + boxCounter + '" type="number" class="form-control  textfield amount" placeholder="Betrag" value="" min="0" oninput="calculateSum()">' +
         '</div>' +
         '<div class="col inputbox deleteButton">' +
-        '<img src="../ressources/img/Icons/minusIcon.png" id="' + boxCounter + '" width="100%" onclick="removeBox()">' +
+        '<img src="../ressources/img/Icons/minusIcon.png" id="' + boxCounter + '" width="100%" onclick="removeBox(this.id)">' +
         '</div>' +
         '<div class="col-2"></div>' +
         '</div>' +
@@ -39,12 +39,9 @@ function addBox() {
     document.getElementById('box' + boxCounter).innerHTML = box;
 }
 
-function removeBox() {
-    if (event.target.id == "") {
-        return;
-    }
+function removeBox(cklicked_id) {
 
-    let boxToDel = document.getElementById('box' + event.target.id);
+    let boxToDel = document.getElementById('box' + cklicked_id);
     let parent = boxToDel.parentNode;
     parent.removeChild(boxToDel);
     calculateSum();
