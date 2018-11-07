@@ -78,3 +78,7 @@ function submit() {
         self.location.href = "../html/Verbindlichkeiten.html";
     }
 }
+
+function noSubmit() {
+    window.alert("Bitte geben Sie zuerst Ihre Verbindlichkeiten ein!");
+}
