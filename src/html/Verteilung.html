@@ -10,7 +10,7 @@
   <title>NiPaMoVa - Verteilung</title>
 </head>
 
-<body id="bootstrap-overrides">
+<body id="bootstrap-overrides" onloadstart="vorhanden()">
 
   <!--Header-->
   <nav class="navbar navbar-expand-lg zHeader">
@@ -20,7 +20,7 @@
     <h5 class="headerTitle">Testamenterstellung</h5>
   </nav>
 
-  <main>
+  <main >
     <div class="container" id="main">
       <!--statusbar / VERLINKUNG ENTFERNEN-->
       <div class="row text-center">
@@ -44,66 +44,70 @@
           </a>
         </div>
       </div>
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col">
-          <br>
-          <h2> Wie soll Ihr Erbe verteilt werden?</h2><br>
-          <br>
+      <div id="individuell">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col">
+            <br>
+            <h2> Wie soll Ihr Erbe verteilt werden?</h2><br>
+            <br>
+          </div>
+          <div class="col-2"></div>
         </div>
-        <div class="col-2"></div>
-      </div>
-      <!--Individuell-->
-      <div class="side-by-side">
-        <h3> Die gesetzliche Verteilung besagt, dass 50% an den Ehegatten gehen und die restlichen 50% werden zu
-          gleichen Teilen auf die Kinder aufgeteilt.</p>
-          <h6>Möchten Sie das Erbe gesetzlich verteilen lassen?
-        </h3>
-        Ja
-        <input type="radio" onclick="verteilen ()" id="jav" name="verteilen">
-        Nein
-        <input type="radio" onclick="verteilen ()" id="neinv" name="verteilen">
-      </div>
-      <br>
-      <div id="indivVert">
-        <!--Ehegatte-->
-        <div class="col-1"></div>
-        <div class="col-11 side-by-side">
-          <h6>Soll Ihr Ehepartner etwas von Ihrem Erbe erhalten?</h6>
+        <!--Individuell-->
+        <div class="side-by-side">
+          <h3> Die gesetzliche Verteilung besagt, dass 50% an den Ehegatten gehen und die restlichen 50% werden zu
+            gleichen Teilen auf die Kinder aufgeteilt.</p>
+            <h6>Möchten Sie das Erbe gesetzlich verteilen lassen?
+          </h3>
           Ja
-          <input type="radio" onclick="eheverteilen ()" id="ja" name="eheverteilen">
+          <input type="radio" onclick="verteilen ()" id="jav" name="verteilen">
           Nein
-          <input type="radio" onclick="eheverteilen ()" id="nein" name="eheverteilen">
-          <br>
-          <br>            
+          <input type="radio" onclick="verteilen ()" id="neinv" name="verteilen">
+        </div>
+        <br>
+        <div id="indivVert">
+          <!--Ehegatte-->
+          <div class="col-1"></div>
+          <div class="col-11 side-by-side">
+            <h6>Soll Ihr Ehepartner etwas von Ihrem Erbe erhalten?</h6>
+            Ja
+            <input type="radio" onclick="eheverteilen ()" id="ja" name="eheverteilen">
+            Nein
+            <input type="radio" onclick="eheverteilen ()" id="nein" name="eheverteilen">
+            <br>
+            <br>
             <div id="platzehe">
 
 
             </div>
-          </form>
-        </div>
-        <br>
-        <!--Kind-->
-        <div class="col-1"></div>
-        <div class="col-11">
-          <div class="side-by-side">
-            <h6>Soll(en) Ihr(e) Kind(er) etwas von Ihrem Erbe erhalten?</h6>
-            Ja
-            <input type="radio" onclick="kindverteilen ()" id="ja2" name="kindverteilen">
-            Nein
-            <input type="radio" onclick="kindverteilen ()" id="nein2" name="kindverteilen">
-            <br>
-            <br>
+            </form>
           </div>
-          <form>
-            <div id="platzkinder">
-
+          <br>
+          <!--Kind-->
+          <div class="col-1"></div>
+          <div class="col-11">
+            <div class="side-by-side">
+              <h6>Soll(en) Ihr(e) Kind(er) etwas von Ihrem Erbe erhalten?</h6>
+              Ja
+              <input type="radio" onclick="kindverteilen ()" id="ja2" name="kindverteilen">
+              Nein
+              <input type="radio" onclick="kindverteilen ()" id="nein2" name="kindverteilen">
+              <br>
+              <br>
             </div>
-          </form>
-          <h6>Zu verteilen sind 100% ---- ></h6>
-          <h6>Bisher verteilt: </h6>
-          <b><h6 id="result">0</h6></b>
-          <h6>%</h6>
+            <form>
+              <div id="platzkinder">
+
+              </div>
+            </form>
+            <h6>Zu verteilen sind 100% ---- ></h6>
+            <h6>Bisher verteilt: </h6>
+            <b>
+              <h6 id="result">0</h6>
+            </b>
+            <h6>%</h6>
+          </div>
         </div>
       </div>
       <!--weiterButton-->

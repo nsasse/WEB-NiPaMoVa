@@ -1,4 +1,14 @@
+let eheteil = sessionStorage.getItem('ehePartner');
+    let kinder = sessionStorage.getItem('anzahlderkinder');
+function vorhanden() {
+    
+    if ((eheteil == null) && (kinder == null)) {
+        let verstecken = document.getElementById("individuell");
+        verstecken.innerHTML = "<p> Keine Verteilung möglich.</p> ";
+    }
+}
 
+window.onload = vorhanden();
 let jaButton = document.getElementById("ja");
 let neinButton = document.getElementById("nein");
 
@@ -61,6 +71,7 @@ verteilen();
 function verteilen() {
     if (neinvButton.checked) {
         indiv.style.display = "block";
+
     }
     else {
         indiv.style.display = "none";
@@ -81,44 +92,48 @@ function count() {
 }
 
 function ueberpruefung() {
-
-    let ehe = document.getElementById('eheg');
-    let counter = document.getElementById('result');
-    let anzahlKinder = sessionStorage.getItem('anzahlderkinder');
-    sessionStorage.removeItem('Anteil')
-    if (javButton.checked == false && neinvButton.checked == false) {
-        window.alert("Bitte treffen Sie eine Auswahl");
+    if ((eheteil == null) && (kinder == null)) {
+        self.location.href = "../html/Zusammenfassung.html";
     } else {
-        if (neinvButton.checked) {
-            if ((ja2Button.checked == false && nein2Button.checked == false) || (jaButton.checked == false && neinButton.checked == false)) {
-                window.alert("Bitte treffen Sie für Ihren Ehepartner und für ihre Kinder eine Auswahl");
-            } else {
-                if (counter.innerHTML != 100) {
-                    window.alert("Bitte überprüfen Sie die Verteilung! Es müssen 100% verteilt werden.")
-                } else {
-                    if (jaButton.checked) {
+        let ehe = document.getElementById('eheg');
+        let counter = document.getElementById('result');
+        let anzahlKinder = sessionStorage.getItem('anzahlderkinder');
+        sessionStorage.removeItem('Anteil')
 
-                        sessionStorage.AnteilEhePartner = ehe.value;
-                    }
-                    if (ja2Button.checked) {
-                        for (var i = 1; i <= anzahlKinder; i++) {
-                            let helper = 'AnteilKind' + i;
-                            sessionStorage.setItem(helper, document.getElementById('kind' + i).value);
-                        }
-                    }
-                    self.location.href = "../html/Zusammenfassung.html"
-                }
-            }
+        if (javButton.checked == false && neinvButton.checked == false) {
+            window.alert("Bitte treffen Sie eine Auswahl");
         } else {
-            sessionStorage.AnteilEhePartner = 50;
+            if (neinvButton.checked) {
+                if ((ja2Button.checked == false && nein2Button.checked == false) || (jaButton.checked == false && neinButton.checked == false)) {
+                    window.alert("Bitte treffen Sie für Ihren Ehepartner und für ihre Kinder eine Auswahl");
+                } else {
+                    if (counter.innerHTML != 100) {
+                        window.alert("Bitte überprüfen Sie die Verteilung! Es müssen 100% verteilt werden.")
+                    } else {
+                        if (jaButton.checked) {
+
+                            sessionStorage.AnteilEhePartner = ehe.value;
+                        }
+                        if (ja2Button.checked) {
+                            for (var i = 1; i <= anzahlKinder; i++) {
+                                let helper = 'AnteilKind' + i;
+                                sessionStorage.setItem(helper, document.getElementById('kind' + i).value);
+                            }
+                        }
+                        self.location.href = "../html/Zusammenfassung.html"
+                    }
+                }
+            } else {
+                sessionStorage.AnteilEhePartner = 50;
 
 
-            var anteilKind = 50 / anzahlKinder;
-            for (var i = 0; i <= anzahlKinder; i++) {
-                let helper = 'AnteilKind' + i;
-                sessionStorage.setItem(helper, anteilKind);
-                self.location.href = "../html/Zusammenfassung.html";
+                var anteilKind = 50 / anzahlKinder;
+                for (var i = 0; i <= anzahlKinder; i++) {
+                    let helper = 'AnteilKind' + i;
+                    sessionStorage.setItem(helper, anteilKind);
+                    self.location.href = "../html/Zusammenfassung.html";
 
+                }
             }
         }
     }
