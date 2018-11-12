@@ -1,6 +1,8 @@
 # WEB-NiPaMoVa
 Nico, Patrick, Monika, Vanessa
 
+Die Anwendung wird gestartet, in dem die index.html in Google Chrome oder in Mozilla Firefox geöffnet wird. Andere Browser könnten evtl. abweichende Ergebnisse erzielen.
+
 Farbcodes:
     Blautöne:
     
