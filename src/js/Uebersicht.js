@@ -53,7 +53,7 @@ function loadTable(testamentArray) {
             gesamtVerm += testamentArray[i].vermoegen[j].value;
         }
 
-        for (j = 0; j < testamentArray[i].vermoegen.length; j++) {
+        for (j = 0; j < testamentArray[i].verbindlichkeiten.length; j++) {
             gesamtVerb += testamentArray[i].verbindlichkeiten[j].value;
         }
 
